@@ -32,14 +32,208 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
-  <scene id="SceneId" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <character id="Lalo">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/LaloAnimation.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="LaloEntrada" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/title.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1510" y="837" width="309" height="179" hasInfluenceArea="no" idTarget="Calle" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <trigger-conversation idTarget="Inicio" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="playButton" x="1665" y="1035" scale="1.873231" layer="0" />
+    </atrezzo>
   </scene>
+  <scene id="Calle" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/calle.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="857" y="949" width="328" height="166" hasInfluenceArea="no" idTarget="EntradaOficina" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="SalirDeLaCalle" />
+        </condition>
+      </exit>
+    </exits>
+  </scene>
+  <scene id="EntradaOficina" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/entrada-edificio.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1473" y="315" width="386" height="711" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="EntradaOficina" />
+        </condition>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Lalo" x="822" y="1105" scale="0.6198309" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <atrezzoobject id="playButton">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/playButton.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <graph-conversation id="Inicio">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Hoy empiezo a trabajar en la nueva empresa, espero no cagarla después de tanto tiempo echando currículums.</speak-player>
+      <condition />
+      <speak-player>Total para que me cojan solo de becario... En fin, menos es nada.</speak-player>
+      <condition />
+      <speak-player>Bueno, la oficina debería estar calle abajo.</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="SalirDeLaCalle" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="LaloEntrada">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Hola, perdone, ¿son estas las oficinas de Seguresa?</speak-player>
+      <condition />
+      <speak-char idTarget="Lalo">Si pero todavía no han abierto la puerta, ¿Vienes a ver a alguien?</speak-char>
+      <condition />
+      <speak-player>No, bueno, en realidad si, hoy empiezo a trabajar aquí y tengo que presentarme a un tal Méndez, supongo que es el jefe.</speak-player>
+      <condition />
+      <speak-char idTarget="Lalo">Ah claro, yo trabajo aquí tambiénl, te deben hacer pillado para sustituir a Conchi que se acaba de ir.</speak-char>
+      <condition />
+      <speak-char idTarget="Lalo">Soy Lalo... Toma, coge un cigarro en lo que esperamos a que abran. ¿Como te llamas?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="785" editor-y="50" x="785" y="50">
+      <speak-player>Gabriel, y gracias. (Aceptas el cigarro)</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Gabriel, y no gracias, no fumo. (Rechazas el cigarro)</speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1813" editor-y="45">
+      <speak-char idTarget="Lalo">Toma fuego Gabriel... Pareces un chico trabajador, te hará falta porque Diego no acostubra a dejar descansos.</speak-char>
+      <condition />
+      <speak-char idTarget="Lalo">Salvo para el cigarro claro está, y solo porque él también los hace. (Se rie)</speak-char>
+      <condition />
+      <speak-player>¿Diego? El señor Méndez supongo.</speak-player>
+      <condition />
+      <speak-char idTarget="Lalo">Si bueno, cuando llevas 15 años trabajando con alguien le llamas por su nombre de pila.</speak-char>
+      <condition />
+      <speak-char idTarget="Lalo">Mira parece que ya abren, da la última calada y entramos.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="EntradaOficina" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1125" editor-y="323">
+      <speak-char idTarget="Lalo">Bueno, para todo hay una primera vez.</speak-char>
+      <condition />
+      <speak-char idTarget="Lalo">Y creeme, cuando quieras levantarte a estirar las piernas agradecerás tener la excusa para salir al balcón.</speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" preListening="yes" editor-x="1552" editor-y="323" x="1552" y="323">
+      <speak-player>Aceptas el cigarro.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Rechazas el cigarro.</speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="1812" editor-y="346">
+      <speak-player>No gracias, de verdad, no me gusta nada el olor.</speak-player>
+      <condition />
+      <speak-char idTarget="Lalo">Está bien, como quieras. Ya me dirás dentro de unos dias. (Se rie)</speak-char>
+      <condition />
+      <speak-player>¿Por que dices eso?</speak-player>
+      <condition />
+      <speak-char idTarget="Lalo">Bueno, el cigarro es una buena excusa cuando quieres salir al balcon a estirar las piernas y coger aire.</speak-char>
+      <condition />
+      <speak-char idTarget="Lalo">Mira parece que ya abren. (Da la última calada y te anima a entrar)</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="EntradaOficina" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
 </eAdventure>
