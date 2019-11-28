@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE animation PUBLIC "SYSTEM" "animation.dtd">
+<animation id="walk.eaa.xml" usetransitions="no" slides="yes">
+  <documentation />
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/polipied.png" type="image" time="200" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/polipiei.png" type="image" time="200" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+</animation>

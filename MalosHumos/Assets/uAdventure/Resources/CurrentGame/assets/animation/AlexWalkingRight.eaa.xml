@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE animation PUBLIC "SYSTEM" "animation.dtd">
+<animation id="AlexWalkingRight.eaa.xml" usetransitions="no" slides="no">
+  <documentation />
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_0.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_2.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_3.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_4.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_5.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_6.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_7.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_8.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_9.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_10.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_11.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_12.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_13.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_14.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_15.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_16.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_17.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_18.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_19.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-Walk_20.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+</animation>

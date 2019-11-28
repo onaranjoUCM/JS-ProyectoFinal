@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE animation PUBLIC "SYSTEM" "animation.dtd">
+<animation id="AlexIdleRight.eaa.xml" usetransitions="no" slides="no">
+  <documentation />
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_9.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_10.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_11.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_12.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_13.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_14.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_15.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_16.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_17.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_18.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_19.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_20.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_21.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_22.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_23.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_24.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_25.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_26.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_27.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_28.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_29.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_30.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_31.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_32.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_33.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_34.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_35.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_36.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_37.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_38.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_39.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_40.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_41.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_42.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_43.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_0.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_2.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_3.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_4.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_5.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_6.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_7.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Side-IdleBase_8.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+</animation>

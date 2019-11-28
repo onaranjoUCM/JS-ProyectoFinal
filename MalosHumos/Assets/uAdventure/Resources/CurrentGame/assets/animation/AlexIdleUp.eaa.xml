@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE animation PUBLIC "SYSTEM" "animation.dtd">
+<animation id="AlexIdleUp.eaa.xml" usetransitions="no" slides="no">
+  <documentation />
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_0.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_2.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_3.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_4.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_5.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_6.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_7.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_8.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_9.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_10.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_11.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_12.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_13.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_14.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_15.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_16.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_17.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_18.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_19.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_20.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_21.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_22.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_23.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_24.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_25.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_26.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_27.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_28.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_29.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_30.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_31.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_32.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_33.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_34.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_35.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_36.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_37.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_38.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_39.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_40.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_41.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_42.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_43.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_44.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_45.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_46.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_47.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_48.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_49.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+  <frame uri="assets/animation/Front-Idle01_50.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+    <documentation>
+    </documentation>
+  </frame>
+  <transition type="none" time="0" />
+</animation>
