@@ -62,6 +62,14 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="Escena_primera" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Francisco">
     <resources name="No name">
@@ -124,33 +132,16 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Segunda_escena</documentation>
+        <effect>
+          <trigger-conversation idTarget="Segunda_escena" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
-  <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/title.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1491" y="788" width="305" height="176" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
-        <post-effect>
-          <speak-player>Hoy empiezo en este colegio nuevo, vamos a ver que tal está.</speak-player>
-          <condition />
-          <speak-player>El patio está vaciío, todo el mundo debe haber entrado ya.</speak-player>
-          <condition />
-          <speak-player>Mi aula debería estar en el segundo piso según laí.</speak-player>
-          <condition />
-        </post-effect>
-      </exit>
-    </exits>
-    <atrezzo>
-      <atrezzo-ref idTarget="PlayButton" x="1640" y="978" scale="1.752993" layer="0" />
-    </atrezzo>
-  </scene>
   <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -162,9 +153,56 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="1381" y="557" width="266" height="183" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
+    <characters>
+      <character-ref idTarget="Laura" x="1325" y="821" scale="0.5255919" orientation="0" layer="2" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="Primera escena" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Francisco" x="1194" y="809" scale="0.3549319" orientation="0" layer="1" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="Primera escena" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Carlos" x="798" y="940" scale="0.6244151" orientation="0" layer="0" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="Primera escena" />
+        </condition>
+      </character-ref>
+    </characters>
+  </scene>
+  <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/title.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1491" y="788" width="305" height="176" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <speak-player>Bueno, pues aqui estamos</speak-player>
+          <condition />
+          <speak-player>Primer día de clase, espero que no vaya mal</speak-player>
+          <condition />
+          <speak-player>Hum, el patio está vacío. Estaran todos en clase</speak-player>
+          <condition />
+          <speak-player>Será mejor subir y ver si puedo conocer a alguien</speak-player>
+          <condition />
+          <activate flag="Primera escena" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="PlayButton" x="1640" y="978" scale="1.752993" layer="0" />
+    </atrezzo>
   </scene>
   <scene id="Escaleras" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -177,22 +215,20 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="443" y="579" width="479" height="340" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="743" y="53" width="318" height="312" hasInfluenceArea="no" idTarget="Primera_escena" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+      <exit rectangular="yes" x="726" y="58" width="287" height="287" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
-          <speak-player>Tiene pinta de ser aquí pero no estoy seguro de cual es mi aula.</speak-player>
+          <speak-player>Hum...una de estas debería ser mi clase, pero no estoy seguro de cual</speak-player>
           <condition />
-          <speak-player>Podría preguntarle a alguien.</speak-player>
-          <condition />
-          <speak-player>Aquellos dos del fondo parecen simpáticos.</speak-player>
+          <speak-player>Deberia preguntar a alguien</speak-player>
           <condition />
         </post-effect>
       </exit>
     </exits>
   </scene>
-  <scene id="Primera_escena" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Pasillo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -201,11 +237,76 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="581" y="475" width="170" height="155" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="984" y="417" width="84" height="297" hasInfluenceArea="no" idTarget="Baño" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <characters>
-      <character-ref idTarget="Laura" x="480" y="841" scale="0.7275656" orientation="0" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Francisco" x="313" y="842" scale="0.4920988" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Laura" x="480" y="841" scale="0.7275656" orientation="0" layer="2" hasInfluenceArea="no">
+        <condition>
+          <active flag="Primera escena" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Francisco" x="313" y="842" scale="0.4920988" orientation="0" layer="1" hasInfluenceArea="no">
+        <condition>
+          <active flag="Primera escena" />
+        </condition>
+      </character-ref>
       <character-ref idTarget="Carlos" x="1497" y="944" scale="1.02374" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="Transaccion" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/black.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="no" x="1129" y="740" width="103" height="62" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <point x="1188" y="740" />
+        <point x="1232" y="771" />
+        <point x="1180" y="802" />
+        <point x="1174" y="784" />
+        <point x="1129" y="791" />
+        <point x="1129" y="763" />
+        <point x="1184" y="760" />
+        <post-effect>
+          <deactivate flag="Primera escena" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="FinClaseTXT" x="666" y="563" scale="0.9198453" layer="0">
+        <condition>
+          <active flag="FinClase" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Flecha" x="1181" y="817" scale="0.3147172" layer="1" />
+    </atrezzo>
+  </scene>
+  <scene id="Baño" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Bathroom.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="717" y="130" width="312" height="734" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
   </scene>
   <atrezzoobject id="PlayButton">
     <resources name="No name">
@@ -221,4 +322,223 @@
       </detailed>
     </description>
   </atrezzoobject>
+  <atrezzoobject id="FinClaseTXT">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/finClaseTXT.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Flecha">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/flecha.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <graph-conversation id="Escena_primera">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Laura">Espero que este año no seas tan plasta Paco</speak-char>
+      <condition />
+      <speak-char idTarget="Francisco">Bueno...eso lo vamos viendo</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="40" editor-y="285">
+      <speak-char idTarget="Francisco">Anda mira, parece que el nuevo esta algo perdido</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Puede ser, vamos a saludarle</speak-char>
+      <condition />
+      <child nodeindex="2" />
+      <effect>
+        <move-npc idTarget="Laura" x="500" y="1000" />
+        <condition />
+        <move-npc idTarget="Francisco" x="320" y="1000" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="291" editor-y="44">
+      <speak-char idTarget="Laura">Bienvenido, yo soy Laura, y este es Francisco</speak-char>
+      <condition />
+      <speak-char idTarget="Francisco">Paco para los amigos.</speak-char>
+      <condition />
+      <speak-player>Encantado,yo soy Gabriel Fernández</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Encantada Gabriel</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Estamos juntos en clase, ¿Lo sabias?</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Es esta que esta justo aqui</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Nosotros vamos a ir entrando en el aula que la clase va a empezar, te esperamos alli.</speak-char>
+      <condition />
+      <speak-char idTarget="Francisco">Y mejor que no tardes muchos, a Domingo no le gustan los rezagados</speak-char>
+      <condition />
+      <speak-player>Gracias, lo tendré en cuenta.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="526" editor-y="44">
+      <speak-player>Que majos, parece que no me va a ir tan mal el primer día</speak-player>
+      <condition />
+      <speak-char idTarget="Carlos">Eh tú, tú, el de azul.</speak-char>
+      <condition />
+      <speak-player>¿Mmm?</speak-player>
+      <condition />
+      <speak-char idTarget="Carlos">Me gustaría hablar contigo</speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="286" editor-y="362">
+      <speak-char idTarget="Carlos">Te he seguido para hablar contigo pero me pongo algo nervioso cuando hay más gente</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">Soy nuevo aquí, como tú</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">Me llamo Carlos Galindo. Encantado Manuel</speak-char>
+      <condition />
+      <speak-player>Gabriel, me llamo Gabriel</speak-player>
+      <condition />
+      <speak-char idTarget="Carlos">Eso, eso, Gabriel</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">¿Que te parece si nos mantenemos en contacto?</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">Acompañados en un centro desconocido va a ser más facil que solos</speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <option-node nodeindex="5" preListening="yes" editor-x="521" editor-y="362" x="521" y="362">
+      <speak-player>Supongo que tienes razón. Yo tampoco conozco a nadie del todo aquí.</speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>Bueno...pero la gente de aqui parece maja eh</speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="6" editor-x="1005" editor-y="122">
+      <speak-char idTarget="Carlos">Genial</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">Oh, tengo que ir a clase. Te veré luego.</speak-char>
+      <condition />
+      <speak-player>Supongo que sí.</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="FinClase" />
+          <condition />
+          <trigger-scene idTarget="Transaccion" x="648" y="648" transitionTime="0" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="775" editor-y="333">
+      <speak-char idTarget="Carlos">Me interesaba mas juntarme con los nuevos porque no se si los de aquí son de fiar</speak-char>
+      <condition />
+      <speak-player>Bueno, no creo que sea malo mantener el contacto contigo</speak-player>
+      <condition />
+      <speak-player>Cuantos mas conozca mejor</speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Segunda_escena">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Carlos">Puff...vaya dia más intenso hemos tenido</speak-char>
+      <condition />
+      <speak-player>La verdad es que si, vamos a tener que trabajar duro eh</speak-player>
+      <condition />
+      <speak-char idTarget="Carlos">Pensamos igual</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">Oye, esos dos vienen hacia aquí, ¿son amigos tuyos?</speak-char>
+      <condition />
+      <speak-player>Les he conocido antes, son muy majos, ya verás</speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
+      <speak-char idTarget="Francisco">Hey, que pasa chicos, vaya día eh</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">No he pillado ni la mitad de las cosas...necesito un respito</speak-char>
+      <condition />
+      <speak-char idTarget="Francisco">Yo tambien, voy a fumar un poco para relajarme</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">La verdad es que a mi no me importaría unirme</speak-char>
+      <condition />
+      <speak-char idTarget="Francisco">¿Vosotros quereis? Invito yo</speak-char>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
+      <speak-char idTarget="Carlos">Bu-bu-bueno...no se</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">Dicen que el tabaco no es muy bueno...</speak-char>
+      <condition />
+      <speak-char idTarget="Francisco">Hey venga, solo son unas caladas de nada, ha sido un día duro y te lo mereces</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">Bueno.....vale</speak-char>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <play-sound background="no" uri="" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="37" editor-y="338">
+      <speak-char idTarget="Francisco">A que no era para tanto</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">A mi me engachó Paco el año pasado y me salvó la vida, me relaja un monton</speak-char>
+      <condition />
+      <speak-char idTarget="Francisco">¿Y tú Gabriel?</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Paco es muy pesado, no te va a dejar en paz hasta que no les una calada por lo menos</speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" editor-x="272" editor-y="338" x="272" y="338">
+      <speak-player>Bueno...una calada no me hará daño</speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>Hum...mejor no</speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="492" editor-y="338">
+      <child nodeindex="7" />
+      <effect>
+        <play-sound background="no" uri="" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="420" editor-y="616">
+      <speak-char idTarget="Francisco">Venga va, no te hagas de rogar </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="727" editor-y="338">
+      <speak-char idTarget="Francisco">Jajajajajaja, tranquilo hombre</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">La primera calada es un poco dura para algunos, pero te acostumbrarás</speak-char>
+      <condition />
+      <speak-char idTarget="Carlos">A mi me ha gustado, deberíamos repetirlo </speak-char>
+      <condition />
+      <speak-player>Hum....creo que se está haciendo algo tarde, deberia ir a casa ya</speak-player>
+      <condition />
+      <speak-char idTarget="Carlos">Tienes razon, mañana nos vemos chicos</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
 </eAdventure>
