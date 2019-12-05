@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Chapter0.Titulo.X">-399</entry>
-<entry key="Chapter0.Titulo.Y">384</entry>
+<entry key="Chapter0.Titulo.X">-328</entry>
+<entry key="Chapter0.Titulo.Y">385</entry>
 <entry key="Chapter0.Escaleras.X">58</entry>
 <entry key="Chapter0.Escaleras.Y">239</entry>
-<entry key="Chapter0.Patio.X">40</entry>
+<entry key="Chapter0.Patio.X">149</entry>
 <entry key="Chapter0.Patio.Y">478</entry>
 <entry key="Chapter0.Primera_escena.X">69</entry>
 <entry key="Chapter0.Primera_escena.Y">9</entry>
-<entry key="Chapter0.Transaccion.X">-340</entry>
-<entry key="Chapter0.Transaccion.Y">132</entry>
-<entry key="Chapter0.Baño.X">563</entry>
-<entry key="Chapter0.Baño.Y">62</entry>
+<entry key="Chapter0.Transaccion.X">568</entry>
+<entry key="Chapter0.Transaccion.Y">324</entry>
+<entry key="Chapter0.Baño.X">384</entry>
+<entry key="Chapter0.Baño.Y">185</entry>
+<entry key="Chapter0.Pasillo.X">466</entry>
+<entry key="Chapter0.Pasillo.Y">229</entry>
+<entry key="Chapter0.CampoFutbol.X">504</entry>
+<entry key="Chapter0.CampoFutbol.Y">460</entry>
+<entry key="Chapter0.Transicion.X">-277</entry>
+<entry key="Chapter0.Transicion.Y">171</entry>
+<entry key="Chapter0.Dia_siguiente.X">-158</entry>
+<entry key="Chapter0.Dia_siguiente.Y">191</entry>
+<entry key="Chapter0.Vestuario.X">94</entry>
+<entry key="Chapter0.Vestuario.Y">288</entry>
 </properties>

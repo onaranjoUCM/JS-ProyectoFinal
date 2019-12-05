@@ -134,7 +134,9 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: Segunda_escena</documentation>
+        <condition>
+          <active flag="Primera escena" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="Segunda_escena" />
           <condition />
@@ -142,38 +144,55 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
+  <character id="Entrenador">
     <resources name="No name">
-      <asset type="background" uri="assets/background/Patio.png" />
+      <asset type="standup" uri="assets/animation/EntrenadorAnim.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1381" y="557" width="266" height="183" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-    <characters>
-      <character-ref idTarget="Laura" x="1325" y="821" scale="0.5255919" orientation="0" layer="2" hasInfluenceArea="no">
-        <condition>
-          <inactive flag="Primera escena" />
-        </condition>
-      </character-ref>
-      <character-ref idTarget="Francisco" x="1194" y="809" scale="0.3549319" orientation="0" layer="1" hasInfluenceArea="no">
-        <condition>
-          <inactive flag="Primera escena" />
-        </condition>
-      </character-ref>
-      <character-ref idTarget="Carlos" x="798" y="940" scale="0.6244151" orientation="0" layer="0" hasInfluenceArea="no">
-        <condition>
-          <inactive flag="Primera escena" />
-        </condition>
-      </character-ref>
-    </characters>
-  </scene>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="VeAlVestuario" />
+          <condition />
+          <trigger-conversation idTarget="VeAlVestuario" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="VeAlVestuario" />
+          <condition />
+          <trigger-conversation idTarget="VeAlVestuario" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
   <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -191,11 +210,11 @@
           <condition />
           <speak-player>Primer día de clase, espero que no vaya mal</speak-player>
           <condition />
-          <speak-player>Hum, el patio está vacío. Estaran todos en clase</speak-player>
+          <speak-player>Aún es pronto, la gente está en el patio. Quizá alguno sea compañero mío.</speak-player>
           <condition />
-          <speak-player>Será mejor subir y ver si puedo conocer a alguien</speak-player>
+          <speak-player>¡Vaya! Por hablar va y suena la campana. Parece que todos suben a clase.</speak-player>
           <condition />
-          <activate flag="Primera escena" />
+          <activate flag="Inicio" />
           <condition />
         </post-effect>
       </exit>
@@ -203,6 +222,41 @@
     <atrezzo>
       <atrezzo-ref idTarget="PlayButton" x="1640" y="978" scale="1.752993" layer="0" />
     </atrezzo>
+  </scene>
+  <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Patio.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1381" y="557" width="266" height="183" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Laura" x="1325" y="821" scale="0.5255919" orientation="0" layer="2" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="Inicio" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Francisco" x="1194" y="809" scale="0.3549319" orientation="0" layer="1" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="Inicio" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Carlos" x="798" y="940" scale="0.6244151" orientation="0" layer="0" hasInfluenceArea="no">
+        <condition>
+          <either>
+            <inactive flag="Inicio" />
+            <active flag="Primera escena" />
+          </either>
+        </condition>
+      </character-ref>
+    </characters>
   </scene>
   <scene id="Escaleras" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -214,11 +268,17 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="443" y="579" width="479" height="340" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="443" y="579" width="479" height="340" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="Primera escena" />
+        </condition>
       </exit>
-      <exit rectangular="yes" x="726" y="58" width="287" height="287" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="721" y="58" width="287" height="287" hasInfluenceArea="no" idTarget="Pasillo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <inactive flag="Primera escena" />
+        </condition>
         <post-effect>
           <speak-player>Hum...una de estas debería ser mi clase, pero no estoy seguro de cual</speak-player>
           <condition />
@@ -241,57 +301,12 @@
       <exit rectangular="yes" x="581" y="475" width="170" height="155" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="984" y="417" width="84" height="297" hasInfluenceArea="no" idTarget="Baño" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Laura" x="480" y="841" scale="0.7275656" orientation="0" layer="2" hasInfluenceArea="no">
-        <condition>
-          <active flag="Primera escena" />
-        </condition>
-      </character-ref>
-      <character-ref idTarget="Francisco" x="313" y="842" scale="0.4920988" orientation="0" layer="1" hasInfluenceArea="no">
-        <condition>
-          <active flag="Primera escena" />
-        </condition>
-      </character-ref>
+      <character-ref idTarget="Laura" x="480" y="841" scale="0.7275656" orientation="0" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Francisco" x="313" y="842" scale="0.4920988" orientation="0" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Carlos" x="1497" y="944" scale="1.02374" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
-  </scene>
-  <scene id="Transaccion" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/black.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="no" x="1129" y="740" width="103" height="62" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <point x="1188" y="740" />
-        <point x="1232" y="771" />
-        <point x="1180" y="802" />
-        <point x="1174" y="784" />
-        <point x="1129" y="791" />
-        <point x="1129" y="763" />
-        <point x="1184" y="760" />
-        <post-effect>
-          <deactivate flag="Primera escena" />
-          <condition />
-        </post-effect>
-      </exit>
-    </exits>
-    <atrezzo>
-      <atrezzo-ref idTarget="FinClaseTXT" x="666" y="563" scale="0.9198453" layer="0">
-        <condition>
-          <active flag="FinClase" />
-        </condition>
-      </atrezzo-ref>
-      <atrezzo-ref idTarget="Flecha" x="1181" y="817" scale="0.3147172" layer="1" />
-    </atrezzo>
   </scene>
   <scene id="Baño" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -307,6 +322,97 @@
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
+  </scene>
+  <scene id="Transicion" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/black.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="990" y="691" width="249" height="124" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="FinClaseTXT" x="662" y="558" scale="0.8634601" layer="1" />
+      <atrezzo-ref idTarget="Flecha" x="1112" y="850" scale="0.6654893" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="Dia_siguiente" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/black.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="986" y="703" width="242" height="114" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="Flecha" x="1111" y="842" scale="0.6021987" layer="1" />
+      <atrezzo-ref idTarget="DiaSiguienteText" x="667" y="587" scale="0.8492377" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="CampoFutbol" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/campo-de-futbol.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Entrenador" x="205" y="1316" scale="0.904661" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Vestuario" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Bathroom.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="ParadaAutobus" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="Casa" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="DespachoDirector" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <atrezzoobject id="PlayButton">
     <resources name="No name">
@@ -339,6 +445,20 @@
   <atrezzoobject id="Flecha">
     <resources name="No name">
       <asset type="image" uri="assets/image/flecha.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="DiaSiguienteText">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/finClaseTXT.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -437,9 +557,9 @@
       <condition />
       <end-conversation>
         <effect>
-          <activate flag="FinClase" />
+          <trigger-scene idTarget="Transicion" x="648" y="648" transitionTime="0" transitionType="0" />
           <condition />
-          <trigger-scene idTarget="Transaccion" x="648" y="648" transitionTime="0" transitionType="5" />
+          <activate flag="Primera escena" />
           <condition />
         </effect>
       </end-conversation>
@@ -507,7 +627,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <option-node nodeindex="4" editor-x="272" editor-y="338" x="272" y="338">
+    <option-node nodeindex="4" preListening="yes" editor-x="272" editor-y="338" x="272" y="338">
       <speak-player>Bueno...una calada no me hará daño</speak-player>
       <condition />
       <child nodeindex="5" />
@@ -537,6 +657,13 @@
       <speak-player>Hum....creo que se está haciendo algo tarde, deberia ir a casa ya</speak-player>
       <condition />
       <speak-char idTarget="Carlos">Tienes razon, mañana nos vemos chicos</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="VeAlVestuario">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Entrenador">(Pendiente)</speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
