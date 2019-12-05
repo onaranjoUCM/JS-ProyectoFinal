@@ -353,7 +353,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="986" y="703" width="242" height="114" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <atrezzo>
@@ -365,13 +365,13 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/campo-de-futbol.jpg" />
+      <asset type="background" uri="assets/background/futbol.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Entrenador" x="205" y="1316" scale="0.904661" orientation="0" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Entrenador" x="114" y="509" scale="0.3502825" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Vestuario" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -388,7 +388,7 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/parada3.png" />
     </resources>
     <name>
     </name>
