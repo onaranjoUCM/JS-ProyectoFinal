@@ -231,7 +231,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="Amiga">
+  <character id="Ana">
     <resources name="No name">
       <asset type="standup" uri="assets/animation/MariaIdleUp.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
@@ -315,6 +315,10 @@
     <exits>
       <exit rectangular="yes" x="1491" y="788" width="305" height="176" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <increment var="dia" value="1" />
+          <condition />
+        </effect>
         <post-effect>
           <speak-player>Bueno, pues aqui estamos</speak-player>
           <condition />
@@ -482,10 +486,20 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="986" y="703" width="242" height="114" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="no" x="1007" y="700" width="220" height="109" hasInfluenceArea="no" idTarget="CasaDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <point x="1007" y="727" />
+        <point x="1114" y="735" />
+        <point x="1114" y="700" />
+        <point x="1227" y="752" />
+        <point x="1125" y="809" />
+        <point x="1118" y="785" />
+        <point x="1007" y="788" />
+        <condition>
+          <equals var="dia" value="2" />
+        </condition>
       </exit>
-      <exit rectangular="yes" x="986" y="574" width="242" height="114" hasInfluenceArea="no" idTarget="CasaDia3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="986" y="574" width="242" height="114" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
       <exit rectangular="yes" x="986" y="447" width="242" height="114" hasInfluenceArea="no" idTarget="Partido" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
@@ -559,14 +573,14 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Amiga" x="695" y="341" scale="0.1300952" orientation="0" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Laura" x="678" y="337" scale="0.2281763" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="CasaDia2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/black.jpg" />
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
     </resources>
     <name>
     </name>
@@ -726,7 +740,7 @@
   </atrezzoobject>
   <atrezzoobject id="DiaSiguienteText">
     <resources name="No name">
-      <asset type="image" uri="assets/image/finClaseTXT.png" />
+      <asset type="image" uri="assets/image/DiaTxt.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -752,12 +766,6 @@
       <speak-char idTarget="Laura">Puede ser, vamos a saludarle</speak-char>
       <condition />
       <child nodeindex="2" />
-      <effect>
-        <move-npc idTarget="Laura" x="500" y="1000" />
-        <condition />
-        <move-npc idTarget="Francisco" x="320" y="1000" />
-        <condition />
-      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="2" editor-x="291" editor-y="44">
       <speak-char idTarget="Laura">Bienvenido, yo soy Laura, y este es Francisco</speak-char>
@@ -964,21 +972,25 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Hola chicos, Jesús me ha dicho que hoy tocan series de 4x100, vamos a ver poco balón… </speak-player>
       <condition />
-      <speak-char idTarget="CompañeroFutbol">Me voy a encender un cigarro para ir calentando...jajajajajaja  </speak-char>
+      <speak-char idTarget="CompañeroFutbol">Puff...que pereza tío</speak-char>
+      <condition />
+      <speak-char idTarget="CompañeroFutbol">Me voy a encender un cigarro para ir calentando...jajajajajaja</speak-char>
       <condition />
       <speak-char idTarget="CompañeroFutbol">¿Quieres uno?</speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
-      <speak-player>Si (Pendiente)</speak-player>
+      <speak-player>Claro, por qué no</speak-player>
       <condition />
       <child nodeindex="2" />
-      <speak-player>No (Pendiente)</speak-player>
+      <speak-player>Mejor no...gracias</speak-player>
       <condition />
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="505" editor-y="50">
+      <speak-char idTarget="CompañeroFutbol">Ya verás que bien te quedas</speak-char>
+      <condition />
       <child nodeindex="4" />
       <effect>
         <activate flag="FumaVestuario" />
@@ -986,12 +998,24 @@
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="505" editor-y="244">
+      <speak-char idTarget="CompañeroFutbol">¿En serio?</speak-char>
+      <condition />
+      <speak-char idTarget="CompañeroFutbol">Vaya...luego no me vengas diciendo que si estas estresado eh</speak-char>
+      <condition />
+      <speak-char idTarget="CompañeroFutbol">En fin...</speak-char>
+      <condition />
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="801" editor-y="156">
+      <speak-char idTarget="CompañeroFutbol">Vamos a salir antes de que el entrenador se mosquee</speak-char>
+      <condition />
+      <speak-player>Vamos vamos</speak-player>
+      <condition />
       <end-conversation>
         <effect>
           <trigger-scene idTarget="CampoFutbol" x="538" y="372" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="Entrenamiento" />
           <condition />
         </effect>
       </end-conversation>
@@ -999,22 +1023,60 @@
   </graph-conversation>
   <graph-conversation id="Entrenamiento">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>*Entrenando* (Pendiente)</speak-player>
+      <speak-char idTarget="Entrenador">Venga chicos, empezando</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">En nada tenemos el partido y teneis que estar en forma</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">Según cómo lo hagáis hoy haréis una cosa u otra en el partido</speak-char>
+      <condition />
+      <speak-player>(Tengo que darlo todo si quiero jugar en el partido)</speak-player>
+      <condition />
+      <speak-player>(Vamos a empezar)</speak-player>
       <condition />
       <child nodeindex="1" />
+      <effect>
+        <play-sound background="no" uri="" />
+        <condition />
+        <wait-time time="3" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
-      <speak-char idTarget="Entrenador">(Conv buena)</speak-char>
+      <speak-player>(Voy a darle mas caña)</speak-player>
       <condition>
         <inactive flag="FumaVestuario" />
       </condition>
-      <speak-char idTarget="Entrenador">(Conv mala)</speak-char>
+      <speak-char idTarget="Entrenador">Así es Gabriel, sigue así</speak-char>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-char idTarget="Entrenador">¡Pedazo fichaje para el partido!</speak-char>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>(Me esta costando un poco respirar...)</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>(...no voy a poder seguir este ritmo...)</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>(Necesito pararme)</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-char idTarget="Entrenador">¡Pero Gabriel, se puede saber que haces!</speak-char>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-char idTarget="Entrenador">¡Al banquillo! </speak-char>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Titulo" x="960" y="810" transitionTime="0" transitionType="0" />
+          <trigger-scene idTarget="ParadaAutobus" x="459" y="342" transitionTime="5" transitionType="3" />
           <condition />
           <trigger-conversation idTarget="ParadaAutobusConv" />
           <condition />
@@ -1024,23 +1086,139 @@
   </graph-conversation>
   <graph-conversation id="ParadaAutobusConv">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Hora de volver a casa</speak-player>
+      <speak-player>Por dios...como he podido liarla tanto</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>Voy a quedarme todo el partido sentado en el banquillo...</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>En fin...será mejor no pensar en eso</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>El entrenamiento me ha dejado algo cansado, iré a casa a relajarme</speak-player>
       <condition />
-      <speak-player>Mira, aquella parece la amiga de la chica que me gusta</speak-player>
+      <speak-player>¿Hum?</speak-player>
       <condition />
-      <speak-player>Voy a hablarle a ver si me cuenta algo de ella</speak-player>
+      <speak-player>¿Esa no es.... Laura?</speak-player>
+      <condition />
+      <speak-player>Me acercaré a saludar</speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
-      <speak-player>(Pendiente)</speak-player>
+      <speak-player>Hola Laura</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Hola Gabriel, ¿Vas a pillar el bus?</speak-char>
+      <condition />
+      <speak-player>Si, justo acabo de salir de entrenar, que en pocos días tenemos partido </speak-player>
+      <condition />
+      <speak-player>Ahora voy a pillar el 581 para volver a casa</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Yo voy a pillar el 627 para ir a casa de mi amiga Ana</speak-char>
+      <condition />
+      <speak-player>¿Ana?¿Va a nuestro instituto?</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Sip, hoy no pudo venir a clase porque volvia de un viaje, ahora ya la veremos todos los días</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Mira te enseño una foto y asi sabes quién es</speak-char>
+      <condition />
+      <child nodeindex="2" />
+      <effect>
+        <wait-time time="3" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
+      <speak-player>Parece maja</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Es muy maja</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">¿Que pasa?¿Te gusta?</speak-char>
+      <condition />
+      <speak-player>Bu-bu-buno no se, no la conozco de nada</speak-player>
+      <condition />
+      <speak-player>Osea es mona y eso...pero no se</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">JAJAJAJAJAJAJAJA</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Bueno, el proxima dia la conoces </speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Quien sabe...podria convencerla para que fuesesmos al partido ese que tienes jeje</speak-char>
+      <condition />
+      <speak-player>Em..bueno...vale jeje</speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="52" editor-y="402">
+      <speak-char idTarget="Laura">Me quedan 10 minutos para coger el bus, me da tiempo a fumar un cigarro antes de llegar a casa de Ana</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">¿Me acompañas? </speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Antes te invitó Paco, asi que como yo soy más maja, ahora te invito yo</speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" editor-x="287" editor-y="402" x="287" y="402">
+      <speak-player>Un descansito después del entrenamineto venga</speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>Hum...mejor que no</speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="541" editor-y="386">
+      <speak-char idTarget="Laura">Estupendo</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Da gusto pasar el rato contigo</speak-char>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="507" editor-y="596">
+      <speak-char idTarget="Laura">Bueno, ¿Sabes que a Ana le gustan los chicos que fuman?</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Si le digo que nos hemos fumado uno seguro que ganas puntos</speak-char>
+      <condition />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="1118" editor-y="450">
+      <speak-char idTarget="Laura">Bueno por ahí viene mi bus, mañana nos vemos</speak-char>
+      <condition />
+      <speak-player>Hasta mañana</speak-player>
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="CasaDia2" x="400" y="450" transitionTime="0" transitionType="0" />
+          <increment var="dia" value="2" />
+          <condition />
+          <trigger-scene idTarget="Dia_siguiente" x="648" y="648" transitionTime="3" transitionType="3" />
           <condition />
         </effect>
       </end-conversation>
+    </dialogue-node>
+    <option-node nodeindex="8" editor-x="742" editor-y="596" x="742" y="596">
+      <speak-player>Bueno..si gano puntos sí</speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>Si el entrenador me pilla, me matará</speak-player>
+      <condition />
+      <child nodeindex="9" />
+    </option-node>
+    <dialogue-node nodeindex="9" editor-x="865" editor-y="370">
+      <speak-char idTarget="Laura">Bueno...tú mismo</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Ana quedará muy decepcionada</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Yo si voy a fumar</speak-char>
+      <condition />
+      <child nodeindex="7" />
+      <effect>
+        <play-sound background="no" uri="" />
+        <condition />
+        <wait-time time="3" />
+        <condition />
+      </effect>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="MadreDia2">
@@ -1087,7 +1265,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="285" editor-y="50" x="285" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
       <speak-player>No pasará nada por fumar algún cigarrillo el día antes de un partido.</speak-player>
       <condition />
       <child nodeindex="2" />
