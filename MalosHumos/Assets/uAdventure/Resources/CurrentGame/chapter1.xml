@@ -306,7 +306,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1491" y="788" width="305" height="176" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1246" y="827" width="305" height="176" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <effect>
           <increment var="dia" value="1" />
@@ -327,7 +327,7 @@
       </exit>
     </exits>
     <atrezzo>
-      <atrezzo-ref idTarget="PlayButton" x="1640" y="978" scale="1.752993" layer="0" />
+      <atrezzo-ref idTarget="PlayButton" x="1393" y="1018" scale="1.752993" layer="0" />
     </atrezzo>
   </scene>
   <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -431,21 +431,6 @@
       <character-ref idTarget="Francisco" x="1194" y="809" scale="0.3549319" orientation="0" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Carlos" x="798" y="940" scale="0.6244151" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
-  </scene>
-  <scene id="Baño" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Bathroom.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="717" y="130" width="312" height="734" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
   </scene>
   <scene id="Transicion" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -580,7 +565,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="845" y="317" width="190" height="323" hasInfluenceArea="no" idTarget="Calle" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <trigger-conversation idTarget="CalleConv" />
           <condition />
@@ -614,6 +599,21 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
+  <scene id="Baño" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Bathroom.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="717" y="130" width="312" height="734" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
   <scene id="Calle" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -625,13 +625,13 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="257" y="155" width="100" height="100" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="EventoCompra" />
         </condition>
       </exit>
       <exit rectangular="yes" x="546" y="276" width="100" height="100" hasInfluenceArea="no" idTarget="Bar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -646,7 +646,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="696" y="114" width="109" height="262" hasInfluenceArea="no" idTarget="Calle" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <objects>
@@ -784,42 +784,42 @@
     </description>
   </atrezzoobject>
   <graph-conversation id="Escena_primera">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="21" editor-y="16">
       <speak-char idTarget="Laura">Espero que este año no seas tan plasta Paco</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Bueno...eso lo vamos viendo</speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="40" editor-y="285">
-      <speak-char idTarget="Francisco">Anda mira, parece que el nuevo esta algo perdido</speak-char>
+    <dialogue-node nodeindex="1" editor-x="281" editor-y="24">
+      <speak-char idTarget="Francisco">Anda mira, parece que el nuevo está algo perdido</speak-char>
       <condition />
       <speak-char idTarget="Laura">Puede ser, vamos a saludarle</speak-char>
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="291" editor-y="44">
-      <speak-char idTarget="Laura">Bienvenido, yo soy Laura, y este es Francisco</speak-char>
+    <dialogue-node nodeindex="2" editor-x="64" editor-y="326">
+      <speak-char idTarget="Laura">Bienvenido, soy Laura, y este es Francisco</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Paco para los amigos.</speak-char>
       <condition />
-      <speak-player>Encantado,yo soy Gabriel Fernández</speak-player>
+      <speak-player>Encantado, yo soy Gabriel Fernández</speak-player>
       <condition />
       <speak-char idTarget="Laura">Encantada Gabriel</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Estamos juntos en clase, ¿Lo sabias?</speak-char>
+      <speak-char idTarget="Laura">Estamos juntos en clase, ¿Lo sabías?</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Es esta que esta justo aqui</speak-char>
+      <speak-char idTarget="Laura">Es esta de aquí</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Nosotros vamos a ir entrando en el aula que la clase va a empezar, te esperamos alli.</speak-char>
+      <speak-char idTarget="Laura">Nosotros vamos a ir entrando en el aula que la clase va a empezar, te esperamos dentro.</speak-char>
       <condition />
-      <speak-char idTarget="Francisco">Y mejor que no tardes muchos, a Domingo no le gustan los rezagados</speak-char>
+      <speak-char idTarget="Francisco">Y mejor no tardes mucho, al profe no le gustan los rezagados</speak-char>
       <condition />
       <speak-player>Gracias, lo tendré en cuenta.</speak-player>
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="526" editor-y="44">
+    <dialogue-node nodeindex="3" editor-x="471" editor-y="438">
       <speak-player>Que majos, parece que no me va a ir tan mal el primer día</speak-player>
       <condition />
       <speak-char idTarget="Carlos">Eh tú, tú, el de azul.</speak-char>
@@ -830,8 +830,8 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="286" editor-y="362">
-      <speak-char idTarget="Carlos">Te he seguido para hablar contigo pero me pongo algo nervioso cuando hay más gente</speak-char>
+    <dialogue-node nodeindex="4" editor-x="637" editor-y="231">
+      <speak-char idTarget="Carlos">Te he seguido para hablar contigo, porque me pongo algo nervioso cuando hay más gente</speak-char>
       <condition />
       <speak-char idTarget="Carlos">Soy nuevo aquí, como tú</speak-char>
       <condition />
@@ -841,24 +841,24 @@
       <condition />
       <speak-char idTarget="Carlos">Eso, eso, Gabriel</speak-char>
       <condition />
-      <speak-char idTarget="Carlos">¿Que te parece si nos mantenemos en contacto?</speak-char>
+      <speak-char idTarget="Carlos">¿Qué te parece si vamos juntos?</speak-char>
       <condition />
-      <speak-char idTarget="Carlos">Acompañados en un centro desconocido va a ser más facil que solos</speak-char>
+      <speak-char idTarget="Carlos">Acompañados en un centro nuevo, será más fácil que solos</speak-char>
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" preListening="yes" editor-x="521" editor-y="362" x="521" y="362">
+    <option-node nodeindex="5" preListening="yes" editor-x="850" editor-y="58" x="850" y="58">
       <speak-player>Supongo que tienes razón. Yo tampoco conozco a nadie del todo aquí.</speak-player>
       <condition />
       <child nodeindex="6" />
-      <speak-player>Bueno...pero la gente de aqui parece maja eh</speak-player>
+      <speak-player>Bueno...pero la gente de aquí parece maja eh</speak-player>
       <condition />
       <child nodeindex="7" />
     </option-node>
-    <dialogue-node nodeindex="6" editor-x="1005" editor-y="122">
+    <dialogue-node nodeindex="6" editor-x="601" editor-y="76">
       <speak-char idTarget="Carlos">Genial</speak-char>
       <condition />
-      <speak-char idTarget="Carlos">Oh, tengo que ir a clase. Te veré luego.</speak-char>
+      <speak-char idTarget="Carlos">Tengo que ir a clase. Te veré luego.</speak-char>
       <condition />
       <speak-player>Supongo que sí.</speak-player>
       <condition />
@@ -871,44 +871,44 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="861" editor-y="456">
-      <speak-char idTarget="Carlos">Me interesaba mas juntarme con los nuevos porque no se si los de aquí son de fiar</speak-char>
+    <dialogue-node nodeindex="7" editor-x="738" editor-y="501">
+      <speak-char idTarget="Carlos">Me interesaba más juntarme con los nuevos porque no se si los de aquí son de fiar</speak-char>
       <condition />
       <speak-player>Bueno, no creo que sea malo mantener el contacto contigo</speak-player>
       <condition />
-      <speak-player>Cuantos mas conozca mejor</speak-player>
+      <speak-player>Cuantos más conozca mejor</speak-player>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Segunda_escena">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Carlos">Puff...vaya dia más intenso hemos tenido</speak-char>
+    <dialogue-node nodeindex="0" editor-x="7" editor-y="0">
+      <speak-char idTarget="Carlos">Puff...vaya día más intenso hemos tenido</speak-char>
       <condition />
       <speak-player>La verdad es que si, vamos a tener que trabajar duro eh</speak-player>
       <condition />
-      <speak-char idTarget="Carlos">Pensamos igual</speak-char>
+      <speak-char idTarget="Carlos">Estoy de acuerdo</speak-char>
       <condition />
-      <speak-char idTarget="Carlos">Oye, esos dos vienen hacia aquí, ¿son amigos tuyos?</speak-char>
+      <speak-char idTarget="Carlos">Oye, esos dos que vienen hacia aquí, ¿son amigos tuyos?</speak-char>
       <condition />
       <speak-player>Les he conocido antes, son muy majos, ya verás</speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
+    <dialogue-node nodeindex="1" editor-x="59" editor-y="183">
       <speak-char idTarget="Francisco">Hey, que pasa chicos, vaya día eh</speak-char>
       <condition />
-      <speak-char idTarget="Laura">No he pillado ni la mitad de las cosas...necesito un respito</speak-char>
+      <speak-char idTarget="Laura">No he pillado ni la mitad de las cosas...necesito un respiro</speak-char>
       <condition />
-      <speak-char idTarget="Francisco">Yo tambien, voy a fumar un poco para relajarme</speak-char>
+      <speak-char idTarget="Francisco">Yo también, voy a fumar un poco para relajarme</speak-char>
       <condition />
       <speak-char idTarget="Laura">La verdad es que a mi no me importaría unirme</speak-char>
       <condition />
-      <speak-char idTarget="Francisco">¿Vosotros quereis? Invito yo</speak-char>
+      <speak-char idTarget="Francisco">¿Vosotros queréis? Invito yo</speak-char>
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
+    <dialogue-node nodeindex="2" editor-x="823" editor-y="47">
       <speak-char idTarget="Carlos">Bu-bu-bueno...no se</speak-char>
       <condition />
       <speak-char idTarget="Carlos">Dicen que el tabaco no es muy bueno...</speak-char>
@@ -923,10 +923,10 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="37" editor-y="338">
+    <dialogue-node nodeindex="3" editor-x="35" editor-y="452">
       <speak-char idTarget="Francisco">A que no era para tanto</speak-char>
       <condition />
-      <speak-char idTarget="Laura">A mi me engachó Paco el año pasado y me salvó la vida, me relaja un monton</speak-char>
+      <speak-char idTarget="Laura">A mi me engachó Paco el año pasado y me salvó la vida, me relaja un montón</speak-char>
       <condition />
       <speak-char idTarget="Francisco">¿Y tú Gabriel?</speak-char>
       <condition />
@@ -934,7 +934,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <option-node nodeindex="4" preListening="yes" editor-x="272" editor-y="338" x="272" y="338">
+    <option-node nodeindex="4" preListening="yes" editor-x="546" editor-y="357" x="546" y="357">
       <speak-player>Bueno...una calada no me hará daño</speak-player>
       <condition />
       <child nodeindex="5" />
@@ -942,28 +942,28 @@
       <condition />
       <child nodeindex="6" />
     </option-node>
-    <dialogue-node nodeindex="5" editor-x="492" editor-y="338">
+    <dialogue-node nodeindex="5" editor-x="1052" editor-y="48">
       <child nodeindex="7" />
       <effect>
         <play-sound background="no" uri="" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="420" editor-y="616">
+    <dialogue-node nodeindex="6" editor-x="645" editor-y="618">
       <speak-char idTarget="Francisco">Venga va, no te hagas de rogar </speak-char>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="727" editor-y="338">
+    <dialogue-node nodeindex="7" editor-x="746" editor-y="286">
       <speak-char idTarget="Francisco">Jajajajajaja, tranquilo hombre</speak-char>
       <condition />
       <speak-char idTarget="Laura">La primera calada es un poco dura para algunos, pero te acostumbrarás</speak-char>
       <condition />
       <speak-char idTarget="Carlos">A mi me ha gustado, deberíamos repetirlo </speak-char>
       <condition />
-      <speak-player>Hum....creo que se está haciendo algo tarde, deberia ir a casa ya</speak-player>
+      <speak-player>Hum....creo que se está haciendo algo tarde, debería ir a casa ya</speak-player>
       <condition />
-      <speak-char idTarget="Carlos">Tienes razon, mañana nos vemos chicos</speak-char>
+      <speak-char idTarget="Carlos">Tienes razón, mañana nos vemos chicos</speak-char>
       <condition />
       <end-conversation>
         <effect>
@@ -975,17 +975,17 @@
   </graph-conversation>
   <graph-conversation id="VeAlVestuario">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Entrenador">Hola Gabriel, eres el primero en cambiarte, hoy el cardio son series de 4 x100</speak-char>
+      <speak-char idTarget="Entrenador">Hola Gabriel, hoy toca cardio, haremos series de 4 x100</speak-char>
       <condition />
-      <speak-player>Hola Jesús, pfff...hoy me apetece sólo hacer entrenamiento con balón…</speak-player>
+      <speak-player>Hola entrenador, pfff...hoy me apetece sólo tocar balón…</speak-player>
       <condition />
       <speak-player>¿Puedo ir al vestuario con mis compañeros, hasta que se cambien?</speak-player>
       <condition />
-      <speak-char idTarget="Entrenador">Si puedes pero no hagas cosas que te perjudiquen.</speak-char>
+      <speak-char idTarget="Entrenador">Si puedes, pero no hagas cosas que te perjudiquen.</speak-char>
       <condition />
-      <speak-char idTarget="Entrenador">Ya sabes que yo acabé dejando el fútbol de élite por fumar…</speak-char>
+      <speak-char idTarget="Entrenador">Ya sabes que yo acabé dejando el fútbol profesional por el tabaco…</speak-char>
       <condition />
-      <speak-player>Ya sabes que yo no fumo... </speak-player>
+      <speak-player>Tranquilo, yo no fumo... </speak-player>
       <condition />
       <end-conversation>
         <effect>
@@ -1000,8 +1000,8 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="VestuarioConv">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Hola chicos, Jesús me ha dicho que hoy tocan series de 4x100, vamos a ver poco balón… </speak-player>
+    <dialogue-node nodeindex="0" editor-x="61" editor-y="7">
+      <speak-player>Hola chicos, el mister me ha dicho que hoy tocan series de 4x100, vamos a ver poco el balón… </speak-player>
       <condition />
       <speak-char idTarget="CompañeroFutbol">Puff...que pereza tío</speak-char>
       <condition />
@@ -1011,7 +1011,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="185" editor-y="310" x="185" y="310">
       <speak-player>Claro, por qué no</speak-player>
       <condition />
       <child nodeindex="2" />
@@ -1028,17 +1028,17 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="505" editor-y="244">
+    <dialogue-node nodeindex="3" editor-x="614" editor-y="346">
       <speak-char idTarget="CompañeroFutbol">¿En serio?</speak-char>
       <condition />
-      <speak-char idTarget="CompañeroFutbol">Vaya...luego no me vengas diciendo que si estas estresado eh</speak-char>
+      <speak-char idTarget="CompañeroFutbol">Vaya...luego no me vengas diciendo que si estas extresado eh</speak-char>
       <condition />
       <speak-char idTarget="CompañeroFutbol">En fin...</speak-char>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="801" editor-y="156">
-      <speak-char idTarget="CompañeroFutbol">Vamos a salir antes de que el entrenador se mosquee</speak-char>
+    <dialogue-node nodeindex="4" editor-x="876" editor-y="14">
+      <speak-char idTarget="CompañeroFutbol">Venga, vamos a salir ya que el entrenador se va a mosquear</speak-char>
       <condition />
       <speak-player>Vamos vamos</speak-player>
       <condition />
@@ -1054,13 +1054,13 @@
   </graph-conversation>
   <graph-conversation id="Entrenamiento">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Entrenador">Venga chicos, empezando</speak-char>
+      <speak-char idTarget="Entrenador">Venga chicos, movimiento</speak-char>
       <condition />
-      <speak-char idTarget="Entrenador">En nada tenemos el partido y teneis que estar en forma</speak-char>
+      <speak-char idTarget="Entrenador">Esta semana tenemos partido y hay que estar en plena forma</speak-char>
       <condition />
-      <speak-char idTarget="Entrenador">Según cómo lo hagáis hoy haréis una cosa u otra en el partido</speak-char>
+      <speak-char idTarget="Entrenador">Es importante entrenar para afrontar el partido preparados</speak-char>
       <condition />
-      <speak-player>(Tengo que darlo todo si quiero jugar en el partido)</speak-player>
+      <speak-player>(Tengo que darlo todo si quiero jugar el partido)</speak-player>
       <condition />
       <speak-player>(Vamos a empezar)</speak-player>
       <condition />
@@ -1072,8 +1072,8 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
-      <speak-player>(Voy a darle mas caña)</speak-player>
+    <dialogue-node nodeindex="1" editor-x="634" editor-y="42">
+      <speak-player>(Voy a darle más caña)</speak-player>
       <condition>
         <inactive flag="FumaVestuario" />
       </condition>
@@ -1081,11 +1081,11 @@
       <condition>
         <inactive flag="FumaVestuario" />
       </condition>
-      <speak-char idTarget="Entrenador">¡Pedazo fichaje para el partido!</speak-char>
+      <speak-char idTarget="Entrenador">¡Pedazo fichaje para esta temporada!</speak-char>
       <condition>
         <inactive flag="FumaVestuario" />
       </condition>
-      <speak-player>(Me esta costando un poco respirar...)</speak-player>
+      <speak-player>(Me está costando un poco respirar...)</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
@@ -1093,15 +1093,15 @@
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-player>(Necesito pararme)</speak-player>
+      <speak-player>(Necesito parar)</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-char idTarget="Entrenador">¡Pero Gabriel, se puede saber que haces!</speak-char>
+      <speak-char idTarget="Entrenador">¡Pero Gabriel, por qué has parado!</speak-char>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-char idTarget="Entrenador">¡Al banquillo! </speak-char>
+      <speak-char idTarget="Entrenador">¡Anda , tira para el banquillo! </speak-char>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
@@ -1117,11 +1117,11 @@
   </graph-conversation>
   <graph-conversation id="ParadaAutobusConv">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Por dios...como he podido liarla tanto</speak-player>
+      <speak-player>Joe...como he podido liarla tanto</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-player>Voy a quedarme todo el partido sentado en el banquillo...</speak-player>
+      <speak-player>Voy a chupar banquillo  todo el partido...</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
@@ -1129,7 +1129,7 @@
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-player>El entrenamiento me ha dejado algo cansado, iré a casa a relajarme</speak-player>
+      <speak-player>He acabado roto, iré a casa a relajarme</speak-player>
       <condition />
       <speak-player>¿Hum?</speak-player>
       <condition />
@@ -1139,22 +1139,22 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
+    <dialogue-node nodeindex="1" editor-x="439" editor-y="10">
       <speak-player>Hola Laura</speak-player>
       <condition />
       <speak-char idTarget="Laura">Hola Gabriel, ¿Vas a pillar el bus?</speak-char>
       <condition />
-      <speak-player>Si, justo acabo de salir de entrenar, que en pocos días tenemos partido </speak-player>
+      <speak-player>Si, acabo de salir de entrenar, esta semana tenemos partido </speak-player>
       <condition />
-      <speak-player>Ahora voy a pillar el 581 para volver a casa</speak-player>
+      <speak-player>Voy a pillar el 581 para ir a casa</speak-player>
       <condition />
-      <speak-char idTarget="Laura">Yo voy a pillar el 627 para ir a casa de mi amiga Ana</speak-char>
+      <speak-char idTarget="Laura">Yo espero el 627,voy a casa de mi amiga Ana</speak-char>
       <condition />
       <speak-player>¿Ana?¿Va a nuestro instituto?</speak-player>
       <condition />
-      <speak-char idTarget="Laura">Sip, hoy no pudo venir a clase porque volvia de un viaje, ahora ya la veremos todos los días</speak-char>
+      <speak-char idTarget="Laura">Sip, hoy no vino a clase porque volvía de viaje, ahora ya la veremos todos los días</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Mira te enseño una foto y asi sabes quién es</speak-char>
+      <speak-char idTarget="Laura">Mira te enseño una foto y así sabes quién es</speak-char>
       <condition />
       <child nodeindex="2" />
       <effect>
@@ -1162,45 +1162,45 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
+    <dialogue-node nodeindex="2" editor-x="734" editor-y="8">
       <speak-player>Parece maja</speak-player>
       <condition />
       <speak-char idTarget="Laura">Es muy maja</speak-char>
       <condition />
-      <speak-char idTarget="Laura">¿Que pasa?¿Te gusta?</speak-char>
+      <speak-char idTarget="Laura">¿Qué pasa?¿Te gusta?</speak-char>
       <condition />
-      <speak-player>Bu-bu-buno no se, no la conozco de nada</speak-player>
+      <speak-player>Bu-bu-bueno no se, no la conozco de nada</speak-player>
       <condition />
-      <speak-player>Osea es mona y eso...pero no se</speak-player>
+      <speak-player>Está bien y eso...pero no se</speak-player>
       <condition />
       <speak-char idTarget="Laura">JAJAJAJAJAJAJAJA</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Bueno, el proxima dia la conoces </speak-char>
+      <speak-char idTarget="Laura">Bueno, el próximo día la conoces </speak-char>
       <condition />
-      <speak-char idTarget="Laura">Quien sabe...podria convencerla para que fuesesmos al partido ese que tienes jeje</speak-char>
+      <speak-char idTarget="Laura">Quién sabe...podría convencerla para que ir al partido ese que tienes jeje</speak-char>
       <condition />
       <speak-player>Em..bueno...vale jeje</speak-player>
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="52" editor-y="402">
-      <speak-char idTarget="Laura">Me quedan 10 minutos para coger el bus, me da tiempo a fumar un cigarro antes de llegar a casa de Ana</speak-char>
+    <dialogue-node nodeindex="3" editor-x="30" editor-y="389">
+      <speak-char idTarget="Laura">Quedan 10 minutos para que llegue el bus, da tiempo a fumar un cigarro </speak-char>
       <condition />
       <speak-char idTarget="Laura">¿Me acompañas? </speak-char>
       <condition />
-      <speak-char idTarget="Laura">Antes te invitó Paco, asi que como yo soy más maja, ahora te invito yo</speak-char>
+      <speak-char idTarget="Laura">Toma un cigarrito, no te cortes</speak-char>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <option-node nodeindex="4" preListening="yes" editor-x="287" editor-y="402" x="287" y="402">
-      <speak-player>Un descansito después del entrenamineto venga</speak-player>
+    <option-node nodeindex="4" preListening="yes" editor-x="371" editor-y="374" x="371" y="374">
+      <speak-player>Vale, hoy ya he entrenado</speak-player>
       <condition />
       <child nodeindex="5" />
       <speak-player>Hum...mejor que no</speak-player>
       <condition />
       <child nodeindex="6" />
     </option-node>
-    <dialogue-node nodeindex="5" editor-x="541" editor-y="386">
+    <dialogue-node nodeindex="5" editor-x="835" editor-y="362">
       <speak-char idTarget="Laura">Estupendo</speak-char>
       <condition />
       <speak-char idTarget="Laura">Da gusto pasar el rato contigo</speak-char>
@@ -1211,14 +1211,14 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="507" editor-y="596">
+    <dialogue-node nodeindex="6" editor-x="599" editor-y="564">
       <speak-char idTarget="Laura">Bueno, ¿Sabes que a Ana le gustan los chicos que fuman?</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Si le digo que nos hemos fumado uno seguro que ganas puntos</speak-char>
+      <speak-char idTarget="Laura">Si le digo que nos hemos fumado uno, seguro que ganas puntos</speak-char>
       <condition />
       <child nodeindex="8" />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="1118" editor-y="450">
+    <dialogue-node nodeindex="7" editor-x="1136" editor-y="347">
       <speak-char idTarget="Laura">Bueno por ahí viene mi bus, mañana nos vemos</speak-char>
       <condition />
       <speak-player>Hasta mañana</speak-player>
@@ -1232,15 +1232,15 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <option-node nodeindex="8" preListening="yes" editor-x="742" editor-y="596" x="742" y="596">
+    <option-node nodeindex="8" preListening="yes" editor-x="905" editor-y="578" x="905" y="578">
       <speak-player>Bueno..si gano puntos sí</speak-player>
       <condition />
       <child nodeindex="5" />
-      <speak-player>Si el entrenador me pilla, me matará</speak-player>
+      <speak-player>Si el entrenador se entera, me matará</speak-player>
       <condition />
       <child nodeindex="9" />
     </option-node>
-    <dialogue-node nodeindex="9" editor-x="865" editor-y="370">
+    <dialogue-node nodeindex="9" editor-x="1068" editor-y="39">
       <speak-char idTarget="Laura">Bueno...tú mismo</speak-char>
       <condition />
       <speak-char idTarget="Laura">Ana quedará muy decepcionada</speak-char>
@@ -1340,7 +1340,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="MaquinaTacaboConv">
-    <option-node nodeindex="0" editor-x="104" editor-y="50" x="104" y="50">
+    <option-node nodeindex="0" preListening="yes" editor-x="104" editor-y="50" x="104" y="50">
       <speak-player>No pasará nada por fumar algún cigarrillo el día antes de un partido.</speak-player>
       <condition />
       <child nodeindex="1" />
