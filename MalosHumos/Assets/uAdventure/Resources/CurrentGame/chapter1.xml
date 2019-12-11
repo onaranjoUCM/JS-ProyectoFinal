@@ -310,7 +310,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -548,7 +548,7 @@
       <atrezzo-ref idTarget="DiaSiguienteText" x="667" y="587" scale="0.8492377" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="Habitacion" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Habitacion" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -559,7 +559,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="240" y="240" width="139" height="354" hasInfluenceArea="no" idTarget="CasaDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -584,7 +584,7 @@
         </post-effect>
       </exit>
       <exit rectangular="yes" x="994" y="188" width="147" height="414" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
