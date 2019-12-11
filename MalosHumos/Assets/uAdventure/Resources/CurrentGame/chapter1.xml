@@ -65,6 +65,15 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
+          <active flag="CampoFutbol1" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="LauraParadaConv" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
           <inactive flag="Primera escena" />
         </condition>
         <effect>
@@ -158,6 +167,37 @@
       </talk-to>
     </actions>
   </character>
+  <character id="CompañeroFutbol">
+    <resources name="No name">
+      <asset type="standup" uri="assets/animation/JoseIdleDown.eaa.xml" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
   <character id="Entrenador">
     <resources name="No name">
       <asset type="standup" uri="assets/animation/EntrenadorAnim.eaa.xml" />
@@ -199,37 +239,6 @@
         </effect>
       </talk-to>
     </actions>
-  </character>
-  <character id="CompañeroFutbol">
-    <resources name="No name">
-      <asset type="standup" uri="assets/animation/JoseIdleDown.eaa.xml" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
-      <asset type="standright" uri="assets/special/EmptyAnimation" />
-      <asset type="standleft" uri="assets/special/EmptyAnimation" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useright" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-      <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
-    </textcolor>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
   </character>
   <character id="Ana">
     <resources name="No name">
@@ -293,10 +302,15 @@
     </description>
     <voice name="" synthesizeAlways="no" />
     <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no" />
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="MadreDia2" />
+          <condition />
+        </effect>
+      </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -412,26 +426,6 @@
       <character-ref idTarget="Carlos" x="1497" y="944" scale="1.02374" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Patio2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Patio.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1381" y="557" width="266" height="183" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-    <characters>
-      <character-ref idTarget="Laura" x="1325" y="821" scale="0.5255919" orientation="0" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Francisco" x="1194" y="809" scale="0.3549319" orientation="0" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Carlos" x="798" y="940" scale="0.6244151" orientation="0" layer="0" hasInfluenceArea="no" />
-    </characters>
-  </scene>
   <scene id="Transicion" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -445,16 +439,28 @@
       <exit rectangular="yes" x="990" y="691" width="249" height="124" hasInfluenceArea="no" idTarget="Patio2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="990" y="551" width="249" height="124" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
     </exits>
     <atrezzo>
       <atrezzo-ref idTarget="FinClaseTXT" x="662" y="558" scale="0.8634601" layer="1" />
       <atrezzo-ref idTarget="Flecha" x="1112" y="850" scale="0.6654893" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="Dia_siguiente" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Patio2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Patio.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Laura" x="1325" y="821" scale="0.5255919" orientation="0" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Francisco" x="1194" y="809" scale="0.3549319" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Carlos" x="798" y="940" scale="0.6244151" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Dia1Entreno" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -464,55 +470,17 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="no" x="1007" y="700" width="220" height="109" hasInfluenceArea="no" idTarget="CasaDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <point x="1007" y="727" />
-        <point x="1114" y="735" />
-        <point x="1114" y="700" />
-        <point x="1227" y="752" />
-        <point x="1125" y="809" />
-        <point x="1118" y="785" />
-        <point x="1007" y="788" />
-        <condition>
-          <equals var="dia" value="2" />
-        </condition>
-      </exit>
-      <exit rectangular="yes" x="986" y="574" width="242" height="114" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-      <exit rectangular="yes" x="986" y="447" width="242" height="114" hasInfluenceArea="no" idTarget="Partido" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="948" y="703" width="302" height="129" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
-          <speak-player>Hoy es el día del partido, debería ir a prepararme</speak-player>
+          <trigger-conversation idTarget="VeAlVestuario" />
           <condition />
-          <speak-player>(Pendiente)</speak-player>
-          <condition />
-          <trigger-conversation idTarget="Partido1" />
-          <condition>
-            <inactive flag="CompraCigarros" />
-            <inactive flag="FumaVestuario" />
-          </condition>
-          <trigger-conversation idTarget="Partido2" />
-          <condition>
-            <active flag="CompraCigarros" />
-            <inactive flag="FumaVestuario" />
-          </condition>
-          <trigger-conversation idTarget="Partido3" />
-          <condition>
-            <inactive flag="CompraCigarros" />
-            <active flag="FumaVestuario" />
-          </condition>
-          <trigger-conversation idTarget="Partido4" />
-          <condition>
-            <active flag="CompraCigarros" />
-            <active flag="FumaVestuario" />
-          </condition>
         </post-effect>
       </exit>
     </exits>
     <atrezzo>
-      <atrezzo-ref idTarget="Flecha" x="1111" y="842" scale="0.6021987" layer="1" />
-      <atrezzo-ref idTarget="DiaSiguienteText" x="667" y="587" scale="0.8492377" layer="0" />
+      <atrezzo-ref idTarget="Flecha" x="1106" y="863" scale="0.7113816" layer="1" />
+      <atrezzo-ref idTarget="Entreno1" x="643" y="644" scale="0.9439218" layer="0" />
     </atrezzo>
   </scene>
   <scene id="CampoFutbol" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -554,6 +522,47 @@
       <character-ref idTarget="Laura" x="678" y="337" scale="0.2281763" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
+  <scene id="Dia2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/black.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="no" x="1007" y="700" width="220" height="109" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <point x="1007" y="727" />
+        <point x="1114" y="735" />
+        <point x="1114" y="700" />
+        <point x="1227" y="752" />
+        <point x="1125" y="809" />
+        <point x="1118" y="785" />
+        <point x="1007" y="788" />
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="Flecha" x="1111" y="842" scale="0.6021987" layer="1" />
+      <atrezzo-ref idTarget="DiaSiguienteText" x="667" y="587" scale="0.8492377" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="Habitacion" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/black.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="240" y="240" width="139" height="354" hasInfluenceArea="no" idTarget="CasaDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+  </scene>
   <scene id="CasaDia2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -564,17 +573,44 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="845" y="317" width="190" height="323" hasInfluenceArea="no" idTarget="Calle" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="456" y="205" width="190" height="323" hasInfluenceArea="no" idTarget="Calle" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="MadreConvD2" />
+        </condition>
         <post-effect>
           <trigger-conversation idTarget="CalleConv" />
           <condition />
         </post-effect>
       </exit>
+      <exit rectangular="yes" x="994" y="188" width="147" height="414" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
     </exits>
     <characters>
       <character-ref idTarget="Madre" x="273" y="1219" scale="0.878644" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="Calle" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="257" y="155" width="100" height="100" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="EventoCompra" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="546" y="276" width="100" height="100" hasInfluenceArea="no" idTarget="Bar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
   </scene>
   <scene id="CasaDia3" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -614,27 +650,6 @@
       </exit>
     </exits>
   </scene>
-  <scene id="Calle" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="257" y="155" width="100" height="100" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="EventoCompra" />
-        </condition>
-      </exit>
-      <exit rectangular="yes" x="546" y="276" width="100" height="100" hasInfluenceArea="no" idTarget="Bar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-  </scene>
   <scene id="Bar" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -652,16 +667,6 @@
     <objects>
       <object-ref idTarget="MaquinaTabaco" x="1000" y="483" scale="2.441267" layer="0" hasInfluenceArea="no" />
     </objects>
-  </scene>
-  <scene id="Habitacion" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/black.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
   </scene>
   <scene id="Partido" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -727,6 +732,16 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
+  <scene id="Dia3" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
   <atrezzoobject id="PlayButton">
     <resources name="No name">
       <asset type="image" uri="assets/image/playButton.png" />
@@ -772,6 +787,20 @@
   <atrezzoobject id="DiaSiguienteText">
     <resources name="No name">
       <asset type="image" uri="assets/image/DiaTxt.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Entreno1">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Imagen1.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -942,10 +971,12 @@
       <condition />
       <child nodeindex="6" />
     </option-node>
-    <dialogue-node nodeindex="5" editor-x="1052" editor-y="48">
+    <dialogue-node nodeindex="5" editor-x="1133" editor-y="117">
       <child nodeindex="7" />
       <effect>
         <play-sound background="no" uri="" />
+        <condition />
+        <wait-time time="2" />
         <condition />
       </effect>
     </dialogue-node>
@@ -954,7 +985,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="746" editor-y="286">
+    <dialogue-node nodeindex="7" editor-x="782" editor-y="313">
       <speak-char idTarget="Francisco">Jajajajajaja, tranquilo hombre</speak-char>
       <condition />
       <speak-char idTarget="Laura">La primera calada es un poco dura para algunos, pero te acostumbrarás</speak-char>
@@ -967,7 +998,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Dia_siguiente" x="648" y="648" transitionTime="0" transitionType="0" />
+          <trigger-scene idTarget="Dia1Entreno" x="648" y="648" transitionTime="0" transitionType="0" />
           <condition />
         </effect>
       </end-conversation>
@@ -1000,7 +1031,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="VestuarioConv">
-    <dialogue-node nodeindex="0" editor-x="61" editor-y="7">
+    <dialogue-node nodeindex="0" editor-x="57" editor-y="126">
       <speak-player>Hola chicos, el mister me ha dicho que hoy tocan series de 4x100, vamos a ver poco el balón… </speak-player>
       <condition />
       <speak-char idTarget="CompañeroFutbol">Puff...que pereza tío</speak-char>
@@ -1011,7 +1042,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="185" editor-y="310" x="185" y="310">
+    <option-node nodeindex="1" preListening="yes" editor-x="287" editor-y="125" x="287" y="125">
       <speak-player>Claro, por qué no</speak-player>
       <condition />
       <child nodeindex="2" />
@@ -1019,7 +1050,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="505" editor-y="50">
+    <dialogue-node nodeindex="2" editor-x="533" editor-y="0">
       <speak-char idTarget="CompañeroFutbol">Ya verás que bien te quedas</speak-char>
       <condition />
       <child nodeindex="4" />
@@ -1028,7 +1059,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="614" editor-y="346">
+    <dialogue-node nodeindex="3" editor-x="541" editor-y="205">
       <speak-char idTarget="CompañeroFutbol">¿En serio?</speak-char>
       <condition />
       <speak-char idTarget="CompañeroFutbol">Vaya...luego no me vengas diciendo que si estas extresado eh</speak-char>
@@ -1037,7 +1068,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="876" editor-y="14">
+    <dialogue-node nodeindex="4" editor-x="820" editor-y="122">
       <speak-char idTarget="CompañeroFutbol">Venga, vamos a salir ya que el entrenador se va a mosquear</speak-char>
       <condition />
       <speak-player>Vamos vamos</speak-player>
@@ -1072,7 +1103,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="634" editor-y="42">
+    <dialogue-node nodeindex="1" editor-x="286" editor-y="30">
       <speak-player>(Voy a darle más caña)</speak-player>
       <condition>
         <inactive flag="FumaVestuario" />
@@ -1116,7 +1147,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ParadaAutobusConv">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="91" editor-y="27">
       <speak-player>Joe...como he podido liarla tanto</speak-player>
       <condition>
         <active flag="FumaVestuario" />
@@ -1137,9 +1168,11 @@
       <condition />
       <speak-player>Me acercaré a saludar</speak-player>
       <condition />
-      <child nodeindex="1" />
+      <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="439" editor-y="10">
+  </graph-conversation>
+  <graph-conversation id="LauraParadaConv">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Hola Laura</speak-player>
       <condition />
       <speak-char idTarget="Laura">Hola Gabriel, ¿Vas a pillar el bus?</speak-char>
@@ -1156,13 +1189,13 @@
       <condition />
       <speak-char idTarget="Laura">Mira te enseño una foto y así sabes quién es</speak-char>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="1" />
       <effect>
         <wait-time time="3" />
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="734" editor-y="8">
+    <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
       <speak-player>Parece maja</speak-player>
       <condition />
       <speak-char idTarget="Laura">Es muy maja</speak-char>
@@ -1181,73 +1214,75 @@
       <condition />
       <speak-player>Em..bueno...vale jeje</speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="30" editor-y="389">
+    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
       <speak-char idTarget="Laura">Quedan 10 minutos para que llegue el bus, da tiempo a fumar un cigarro </speak-char>
       <condition />
       <speak-char idTarget="Laura">¿Me acompañas? </speak-char>
       <condition />
       <speak-char idTarget="Laura">Toma un cigarrito, no te cortes</speak-char>
       <condition />
-      <child nodeindex="4" />
+      <child nodeindex="3" />
     </dialogue-node>
-    <option-node nodeindex="4" preListening="yes" editor-x="371" editor-y="374" x="371" y="374">
-      <speak-player>Vale, hoy ya he entrenado</speak-player>
+    <option-node nodeindex="3" preListening="yes" editor-x="33" editor-y="394" x="33" y="394">
+      <speak-player>Vale, hoy ya he entrenado, no pasará nada</speak-player>
       <condition />
-      <child nodeindex="5" />
+      <child nodeindex="4" />
       <speak-player>Hum...mejor que no</speak-player>
       <condition />
-      <child nodeindex="6" />
+      <child nodeindex="5" />
     </option-node>
-    <dialogue-node nodeindex="5" editor-x="835" editor-y="362">
+    <dialogue-node nodeindex="4" editor-x="366" editor-y="374">
       <speak-char idTarget="Laura">Estupendo</speak-char>
       <condition />
       <speak-char idTarget="Laura">Da gusto pasar el rato contigo</speak-char>
       <condition />
-      <child nodeindex="7" />
+      <child nodeindex="6" />
       <effect>
         <activate flag="FumaParadaBus" />
         <condition />
+        <play-sound background="no" uri="" />
+        <condition />
+        <wait-time time="3" />
+        <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="599" editor-y="564">
+    <dialogue-node nodeindex="5" editor-x="253" editor-y="588">
       <speak-char idTarget="Laura">Bueno, ¿Sabes que a Ana le gustan los chicos que fuman?</speak-char>
       <condition />
       <speak-char idTarget="Laura">Si le digo que nos hemos fumado uno, seguro que ganas puntos</speak-char>
       <condition />
-      <child nodeindex="8" />
+      <child nodeindex="7" />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="1136" editor-y="347">
+    <dialogue-node nodeindex="6" editor-x="774" editor-y="124">
       <speak-char idTarget="Laura">Bueno por ahí viene mi bus, mañana nos vemos</speak-char>
       <condition />
       <speak-player>Hasta mañana</speak-player>
       <condition />
       <end-conversation>
         <effect>
-          <increment var="dia" value="2" />
-          <condition />
-          <trigger-scene idTarget="Dia_siguiente" x="648" y="648" transitionTime="3" transitionType="3" />
+          <trigger-scene idTarget="Dia2" x="648" y="648" transitionTime="3" transitionType="3" />
           <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <option-node nodeindex="8" preListening="yes" editor-x="905" editor-y="578" x="905" y="578">
-      <speak-player>Bueno..si gano puntos sí</speak-player>
+    <option-node nodeindex="7" preListening="yes" editor-x="488" editor-y="588" x="488" y="588">
+      <speak-player>Bueno...si gano puntos...</speak-player>
       <condition />
-      <child nodeindex="5" />
+      <child nodeindex="4" />
       <speak-player>Si el entrenador se entera, me matará</speak-player>
       <condition />
-      <child nodeindex="9" />
+      <child nodeindex="8" />
     </option-node>
-    <dialogue-node nodeindex="9" editor-x="1068" editor-y="39">
+    <dialogue-node nodeindex="8" editor-x="687" editor-y="371">
       <speak-char idTarget="Laura">Bueno...tú mismo</speak-char>
       <condition />
       <speak-char idTarget="Laura">Ana quedará muy decepcionada</speak-char>
       <condition />
       <speak-char idTarget="Laura">Yo si voy a fumar</speak-char>
       <condition />
-      <child nodeindex="7" />
+      <child nodeindex="6" />
       <effect>
         <play-sound background="no" uri="" />
         <condition />
