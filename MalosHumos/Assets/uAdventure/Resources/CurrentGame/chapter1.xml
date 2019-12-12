@@ -123,6 +123,13 @@
           <condition />
         </effect>
       </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: PatioDia2</documentation>
+        <effect>
+          <trigger-conversation idTarget="PatioDia2" />
+          <condition />
+        </effect>
+      </talk-to>
     </actions>
   </character>
   <character id="Carlos">
@@ -273,7 +280,7 @@
   </character>
   <character id="Madre">
     <resources name="No name">
-      <asset type="standup" uri="assets/animation/EntrenadorAnim.eaa.xml" />
+      <asset type="standup" uri="assets/animation/MadreUp.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
@@ -493,7 +500,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Entrenador" x="114" y="509" scale="0.3502825" orientation="0" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Entrenador" x="169" y="736" scale="0.324747" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Vestuario" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -541,6 +548,12 @@
         <point x="1125" y="809" />
         <point x="1118" y="785" />
         <point x="1007" y="788" />
+        <post-effect>
+          <speak-player>(Que bien he descansado)</speak-player>
+          <condition />
+          <speak-player>(Seguramente mi madre me felicite por mi Santo, le encantan esas cosas)</speak-player>
+          <condition />
+        </post-effect>
       </exit>
     </exits>
     <atrezzo>
@@ -552,13 +565,13 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/black.jpg" />
+      <asset type="background" uri="assets/background/BedroomBackground.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="240" y="240" width="139" height="354" hasInfluenceArea="no" idTarget="CasaDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-8" y="114" width="177" height="736" hasInfluenceArea="no" idTarget="CasaDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -567,13 +580,13 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/black.jpg" />
+      <asset type="background" uri="assets/background/Background.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="456" y="205" width="190" height="323" hasInfluenceArea="no" idTarget="Calle" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="145" y="19" width="172" height="362" hasInfluenceArea="no" idTarget="Calle" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="MadreConvD2" />
@@ -583,12 +596,12 @@
           <condition />
         </post-effect>
       </exit>
-      <exit rectangular="yes" x="994" y="188" width="147" height="414" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1654" y="82" width="148" height="342" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Madre" x="273" y="1219" scale="0.878644" orientation="0" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Madre" x="801" y="558" scale="0.231842" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Calle" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -612,44 +625,6 @@
       </exit>
     </exits>
   </scene>
-  <scene id="CasaDia3" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/black.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <characters>
-      <character-ref idTarget="Madre" x="160" y="847" scale="0.6101695" orientation="0" layer="0" hasInfluenceArea="no" />
-    </characters>
-  </scene>
-  <scene id="DespachoDirector" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-  </scene>
-  <scene id="Baño" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Bathroom.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="717" y="130" width="312" height="734" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-  </scene>
   <scene id="Bar" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -667,6 +642,24 @@
     <objects>
       <object-ref idTarget="MaquinaTabaco" x="1000" y="483" scale="2.441267" layer="0" hasInfluenceArea="no" />
     </objects>
+  </scene>
+  <scene id="CasaDia3" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Background.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1657" y="83" width="142" height="339" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Madre" x="845" y="527" scale="0.2387301" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="Partido" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -733,6 +726,31 @@
     <default-initial-position x="400" y="450" />
   </scene>
   <scene id="Dia3" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="Baño" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Bathroom.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="717" y="130" width="312" height="734" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="DespachoDirector" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1200,6 +1218,8 @@
       <condition />
       <speak-char idTarget="Laura">Es muy maja</speak-char>
       <condition />
+      <speak-char idTarget="Laura">Viene a fumar con nosotros en el patio</speak-char>
+      <condition />
       <speak-char idTarget="Laura">¿Qué pasa?¿Te gusta?</speak-char>
       <condition />
       <speak-player>Bu-bu-bueno no se, no la conozco de nada</speak-player>
@@ -1371,7 +1391,12 @@
       <condition />
       <speak-player>5€ el paquete, podría comprar para cuando esté con los chicos…</speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <activate flag="EventoCompra" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="MaquinaTacaboConv">
@@ -1399,6 +1424,14 @@
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="561" editor-y="156">
       <speak-player>Bueno está bien, vamos a clase o llegaré tarde</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PatioDia2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Francisco">
+      </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
