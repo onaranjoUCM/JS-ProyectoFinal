@@ -530,7 +530,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="948" y="703" width="302" height="129" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="979" y="703" width="271" height="123" hasInfluenceArea="no" idTarget="CampoFutbol" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <trigger-conversation idTarget="VeAlVestuario" />
@@ -650,32 +650,50 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="757" y="261" width="56" height="193" hasInfluenceArea="no" idTarget="Bar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
   </scene>
   <scene id="Bar" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/barMaquinadeTbaco.png" />
+      <asset type="background" uri="assets/background/barMaquinadeTabaco2.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="696" y="114" width="109" height="262" hasInfluenceArea="no" idTarget="TransicionDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="no" x="698" y="171" width="108" height="233" hasInfluenceArea="no" idTarget="TransicionDia2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <point x="698" y="172" />
+        <point x="806" y="171" />
+        <point x="806" y="404" />
+        <point x="741" y="404" />
+        <point x="741" y="262" />
+        <point x="699" y="262" />
         <condition>
           <active flag="CompraCigarros" />
         </condition>
       </exit>
     </exits>
-    <objects>
-      <object-ref idTarget="MaquinaTabaco" x="1000" y="483" scale="2.441267" layer="0" hasInfluenceArea="no" />
-    </objects>
+    <active-areas>
+      <active-area id="Expendedora" rectangular="yes" x="937" y="124" width="195" height="354" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="MaquinaTacaboConv" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
   </scene>
   <scene id="TransicionDia2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -713,11 +731,6 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1381" y="557" width="266" height="183" hasInfluenceArea="no" idTarget="Escaleras" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
     <characters>
       <character-ref idTarget="Francisco" x="510" y="812" scale="0.3549319" orientation="0" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Carlos" x="646" y="803" scale="0.4864035" orientation="0" layer="0" hasInfluenceArea="no" />
@@ -736,7 +749,11 @@
       <character-ref idTarget="Laura" x="678" y="337" scale="0.2281763" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
     <atrezzo>
-      <atrezzo-ref idTarget="FotoAna" x="481" y="404" scale="0.5367231" layer="1" />
+      <atrezzo-ref idTarget="FotoAna" x="481" y="404" scale="0.5367231" layer="1">
+        <condition>
+          <active flag="MuestraFoto" />
+        </condition>
+      </atrezzo-ref>
     </atrezzo>
   </scene>
   <scene id="Dia3" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -1117,7 +1134,7 @@
   </atrezzoobject>
   <atrezzoobject id="Entreno1">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Imagen1.png" />
+      <asset type="image" uri="assets/image/entrenarText.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1204,12 +1221,12 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="637" editor-y="231">
+    <dialogue-node nodeindex="4" editor-x="1036" editor-y="352">
       <speak-char idTarget="Carlos">Te he seguido para hablar contigo, porque me pongo algo nervioso cuando hay más gente</speak-char>
       <condition />
       <speak-char idTarget="Carlos">Soy nuevo aquí, como tú</speak-char>
       <condition />
-      <speak-char idTarget="Carlos">Me llamo Carlos Galindo. Encantado Manuel</speak-char>
+      <speak-char idTarget="Carlos">Me llamo Carlos. Encantado Manuel</speak-char>
       <condition />
       <speak-player>Gabriel, me llamo Gabriel</speak-player>
       <condition />
@@ -1256,7 +1273,7 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Segunda_escena">
-    <dialogue-node nodeindex="0" editor-x="7" editor-y="0">
+    <dialogue-node nodeindex="0" editor-x="58" editor-y="25">
       <speak-char idTarget="Carlos">Puff...vaya día más intenso hemos tenido</speak-char>
       <condition />
       <speak-player>La verdad es que si, vamos a tener que trabajar duro eh</speak-player>
@@ -1269,7 +1286,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="59" editor-y="183">
+    <dialogue-node nodeindex="1" editor-x="301" editor-y="28">
       <speak-char idTarget="Francisco">Hey, que pasa chicos, vaya día eh</speak-char>
       <condition />
       <speak-char idTarget="Laura">No he pillado ni la mitad de las cosas...necesito un respiro</speak-char>
@@ -1282,7 +1299,7 @@
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="480" editor-y="38">
+    <dialogue-node nodeindex="2" editor-x="566" editor-y="44">
       <speak-char idTarget="Carlos">Bu-bu-bueno...no se</speak-char>
       <condition />
       <speak-char idTarget="Carlos">Dicen que el tabaco no es muy bueno...</speak-char>
@@ -1292,12 +1309,8 @@
       <speak-char idTarget="Carlos">Bueno.....vale</speak-char>
       <condition />
       <child nodeindex="3" />
-      <effect>
-        <play-sound background="no" uri="" />
-        <condition />
-      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="35" editor-y="452">
+    <dialogue-node nodeindex="3" editor-x="802" editor-y="43">
       <speak-char idTarget="Francisco">A que no era para tanto</speak-char>
       <condition />
       <speak-char idTarget="Laura">A mi me engachó Paco el año pasado y me salvó la vida, me relaja un montón</speak-char>
@@ -1308,7 +1321,7 @@
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <option-node nodeindex="4" preListening="yes" editor-x="546" editor-y="357" x="546" y="357">
+    <option-node nodeindex="4" preListening="yes" editor-x="342" editor-y="325" x="342" y="325">
       <speak-player>Bueno...una calada no me hará daño</speak-player>
       <condition />
       <child nodeindex="5" />
@@ -1316,21 +1329,21 @@
       <condition />
       <child nodeindex="6" />
     </option-node>
-    <dialogue-node nodeindex="5" editor-x="1133" editor-y="117">
+    <dialogue-node nodeindex="5" editor-x="661" editor-y="342">
+      <speak-player>*cough* *cough*</speak-player>
+      <condition />
+      <speak-player>Puaj sabe fatal</speak-player>
+      <condition />
+      <speak-player>¿Os gusta esto?</speak-player>
+      <condition />
       <child nodeindex="7" />
-      <effect>
-        <play-sound background="no" uri="" />
-        <condition />
-        <wait-time time="2" />
-        <condition />
-      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="645" editor-y="618">
+    <dialogue-node nodeindex="6" editor-x="339" editor-y="604">
       <speak-char idTarget="Francisco">Venga va, no te hagas de rogar </speak-char>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="786" editor-y="287">
+    <dialogue-node nodeindex="7" editor-x="966" editor-y="362">
       <speak-char idTarget="Francisco">Jajajajajaja, tranquilo hombre</speak-char>
       <condition />
       <speak-char idTarget="Laura">La primera calada es un poco dura para algunos, pero te acostumbrarás</speak-char>
@@ -1392,7 +1405,7 @@
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" preListening="yes" editor-x="287" editor-y="125" x="287" y="125">
-      <speak-player>Claro, por qué no</speak-player>
+      <speak-player>Vale, a ver si así me voy acostumbrando</speak-player>
       <condition />
       <child nodeindex="2" />
       <speak-player>Mejor no...gracias</speak-player>
@@ -1446,8 +1459,6 @@
       <condition />
       <child nodeindex="1" />
       <effect>
-        <play-sound background="no" uri="" />
-        <condition />
         <wait-time time="3" />
         <condition />
       </effect>
@@ -1488,6 +1499,118 @@
       <end-conversation>
         <effect>
           <trigger-scene idTarget="Dia2" x="648" y="648" transitionTime="5" transitionType="3" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MadreDia2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Madre">Buenos dias hijo</speak-char>
+      <condition />
+      <speak-player>Buenos dias Mama</speak-player>
+      <condition />
+      <speak-char idTarget="Madre">Espero que hayas descansado, ayer viniste agotado</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="303" editor-y="51">
+      <speak-char idTarget="Madre">Uy...Pero...¡Si casi se me olvida!</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">¡Felicidades Gabriel, hoy es tu santo!</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">Toma, 10€ para  que te compres lo que quieras</speak-char>
+      <condition />
+      <speak-player>Gracias mamá, me vienen de perlas.</speak-player>
+      <condition />
+      <speak-char idTarget="Madre">Y ahora date prisa que vas a llegar  tarde al instituto</speak-char>
+      <condition />
+      <speak-player>Me voy volando.</speak-player>
+      <condition />
+      <speak-player>Adiós Mamá</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="MadreConvD2" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CalleConv">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Bueeeeno</speak-player>
+      <condition />
+      <speak-player>¿Que podria hacer con estos 10€? </speak-player>
+      <condition />
+      <speak-player>Debo pensar bien en que invertirlo</speak-player>
+      <condition />
+      <speak-player>¿Hum?</speak-player>
+      <condition />
+      <speak-player>Podría pasar por el bar y comprar tabaco para los chicos</speak-player>
+      <condition />
+      <speak-player>Francisco me dijo que me tocaba invitar y no quiero que se enfaden conmigo</speak-player>
+      <condition />
+      <speak-player>Ni siquiera tendría por que fumar yo no? Solo invitarles</speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="353" editor-y="50" x="353" y="50">
+      <speak-player>Entrar al bar a comprar tabaco</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Pasar de largo e ir a clase</speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="623" editor-y="54">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Bar" x="538" y="402" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="643" editor-y="254">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="TransicionDia2" x="648" y="648" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="BarConv">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>En este bar, podría aprovechar a pillar algo para el recreo</speak-player>
+      <condition />
+      <speak-player>Allí hay  una maquina de tabaco, a ver cuanto cuesta…</speak-player>
+      <condition />
+      <speak-player>5€ el paquete, podría comprar para cuando esté con los chicos…</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="EventoCompra" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MaquinaTacaboConv">
+    <dialogue-node nodeindex="0" editor-x="104" editor-y="50">
+      <speak-player>A ver como funciona esto...</speak-player>
+      <condition />
+      <speak-player>Aqui</speak-player>
+      <condition />
+      <speak-player>¿5€ cuesta la cajetilla? Sale caro esto...</speak-player>
+      <condition />
+      <speak-player>Bueno como sea, ya está</speak-player>
+      <condition />
+      <speak-player>Vamos rápido a clase o llegaré tarde</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="CompraCigarros" />
           <condition />
         </effect>
       </end-conversation>
@@ -1634,126 +1757,19 @@
       </effect>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="MadreDia2">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Madre">Buenos dias hijo</speak-char>
-      <condition />
-      <speak-player>Buenos dias Mama</speak-player>
-      <condition />
-      <speak-char idTarget="Madre">Espero que hayas descansado, ayer viniste agotado</speak-char>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="303" editor-y="51">
-      <speak-char idTarget="Madre">Uy...Pero...¡Si casi se me olvida!</speak-char>
-      <condition />
-      <speak-char idTarget="Madre">¡Felicidades Gabriel, hoy es tu santo!</speak-char>
-      <condition />
-      <speak-char idTarget="Madre">Toma, 10€ para  que te compres lo que quieras</speak-char>
-      <condition />
-      <speak-player>Gracias mamá, me vienen de perlas.</speak-player>
-      <condition />
-      <speak-char idTarget="Madre">Y ahora date prisa que vas a llegar  tarde al instituto</speak-char>
-      <condition />
-      <speak-player>Me voy volando.</speak-player>
-      <condition />
-      <speak-player>Adiós Mamá</speak-player>
-      <condition />
-      <end-conversation>
-        <effect>
-          <activate flag="MadreConvD2" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="CalleConv">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Bueeeeno</speak-player>
-      <condition />
-      <speak-player>¿Que podria hacer con estos 10€? </speak-player>
-      <condition />
-      <speak-player>Debo pensar bien en que invertirlo</speak-player>
-      <condition />
-      <speak-player>¿Hum?</speak-player>
-      <condition />
-      <speak-player>Podría pasar por el bar y comprar tabaco para los chicos</speak-player>
-      <condition />
-      <speak-player>Francisco me dijo que me tocaba invitar y no quiero que se enfaden conmigo</speak-player>
-      <condition />
-      <speak-player>Ni siquiera tendría por que fumar yo no? Solo invitarles</speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="353" editor-y="50" x="353" y="50">
-      <speak-player>Entrar al bar a comprar tabaco</speak-player>
-      <condition />
-      <child nodeindex="2" />
-      <speak-player>Pasar de largo e ir a clase</speak-player>
-      <condition />
-      <child nodeindex="3" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="623" editor-y="54">
-      <end-conversation>
-        <effect>
-          <trigger-scene idTarget="Bar" x="538" y="402" transitionTime="0" transitionType="0" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="643" editor-y="254">
-      <end-conversation>
-        <effect>
-          <trigger-scene idTarget="TransicionDia2" x="648" y="648" transitionTime="0" transitionType="0" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="BarConv">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>En este bar, podría aprovechar a pillar algo para el recreo</speak-player>
-      <condition />
-      <speak-player>Allí hay  una maquina de tabaco, a ver cuanto cuesta…</speak-player>
-      <condition />
-      <speak-player>5€ el paquete, podría comprar para cuando esté con los chicos…</speak-player>
-      <condition />
-      <end-conversation>
-        <effect>
-          <activate flag="EventoCompra" />
-          <condition />
-        </effect>
-      </end-conversation>
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="MaquinaTacaboConv">
-    <dialogue-node nodeindex="0" editor-x="104" editor-y="50">
-      <speak-player>A ver como funciona esto...</speak-player>
-      <condition />
-      <speak-player>Aqui</speak-player>
-      <condition />
-      <speak-player>¿5€ cuesta la cajetilla? Sale caro esto...</speak-player>
-      <condition />
-      <speak-player>Bueno como sea, ya está</speak-player>
-      <condition />
-      <speak-player>Vamos rápido a clase o llegaré tarde</speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="PatioDia2">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Hola chicos, que tal?</speak-player>
       <condition />
       <speak-char idTarget="Carlos">Hola Gabriel</speak-char>
       <condition />
-      <speak-char idTarget="Francisco">¿Que, al final le has cogido gusto verdad?</speak-char>
+      <speak-char idTarget="Francisco">¿Que, al final le has cogido gusto a venir aquí después de clase verdad?</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Venga, hoy te tocaba invitar, déjate un cigarro</speak-char>
       <condition />
-      <speak-char idTarget="Laura">¿Tienes no?</speak-char>
+      <speak-char idTarget="Francisco">¿Tienes no?</speak-char>
       <condition />
-      <speak-player>No, lo siento, prefiero no fumar más</speak-player>
+      <speak-player>No, lo siento, prefiero no fumar más que luego entreno peor</speak-player>
       <condition>
         <inactive flag="CompraCigarros" />
       </condition>
@@ -1761,7 +1777,7 @@
       <condition>
         <inactive flag="CompraCigarros" />
       </condition>
-      <speak-player>Pues vas a tener que devolvernosla, que los cigarros no los regalan ¿Sabes?</speak-player>
+      <speak-char idTarget="Francisco">Pues vas a tener que devolvernosla, que los cigarros no los regalan ¿Sabes?</speak-char>
       <condition>
         <inactive flag="CompraCigarros" />
       </condition>
@@ -1793,7 +1809,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Vamos a ver que novedades hay en videojuegos….</speak-player>
       <condition />
-      <speak-player>Por fin ha salido el Fornytre 2 !!!  Tiene que ser mío</speak-player>
+      <speak-player>Por fin ha salido el Fornytre 2!!! Tiene que ser mío</speak-player>
       <condition />
       <speak-player>A ver cuanto cuesta…  9,95€</speak-player>
       <condition />
@@ -1801,7 +1817,7 @@
       <condition>
         <inactive flag="CompraCigarros" />
       </condition>
-      <speak-player>Nooooo  Solo tengo 5€, los otros 5 me los gasté en tabaco…</speak-player>
+      <speak-player>Nooooo. Solo tengo 5€, los otros 5 me los gasté en tabaco…</speak-player>
       <condition>
         <active flag="CompraCigarros" />
       </condition>
