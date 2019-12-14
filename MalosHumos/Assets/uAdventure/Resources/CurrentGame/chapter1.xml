@@ -134,7 +134,21 @@
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
+          <either>
+            <inactive flag="DecidesRobarPuro" />
+            <active flag="RobarPuro" />
+          </either>
+          <active flag="EsperarBaño" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="BañoDia4" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
           <inactive flag="RobarPuro" />
+          <active flag="EsperarBaño" />
           <active flag="DecidesRobarPuro" />
         </condition>
         <effect>
@@ -845,17 +859,17 @@
     <characters>
       <character-ref idTarget="Francisco" x="768" y="810" scale="0.3549319" orientation="0" layer="2" hasInfluenceArea="no">
         <condition>
-          <inactive flag="DecidesRobarPuro" />
+          <inactive flag="EsperarBaño" />
         </condition>
       </character-ref>
       <character-ref idTarget="Carlos" x="889" y="808" scale="0.4864035" orientation="0" layer="1" hasInfluenceArea="no">
         <condition>
-          <inactive flag="DecidesRobarPuro" />
+          <inactive flag="EsperarBaño" />
         </condition>
       </character-ref>
       <character-ref idTarget="Laura" x="652" y="803" scale="0.5292879" orientation="0" layer="0" hasInfluenceArea="no">
         <condition>
-          <inactive flag="DecidesRobarPuro" />
+          <inactive flag="EsperarBaño" />
         </condition>
       </character-ref>
     </characters>
@@ -875,6 +889,10 @@
       </exit>
       <exit rectangular="yes" x="1702" y="213" width="221" height="705" hasInfluenceArea="no" idTarget="DespachoDirector" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="DecidesRobarPuro" />
+          <inactive flag="RobarPuro" />
+        </condition>
         <post-effect>
           <speak-player>Este es el despacho del director</speak-player>
           <condition />
@@ -896,6 +914,11 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-5" y="1460" width="2002" height="130" hasInfluenceArea="no" idTarget="Escaleras2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
     <active-areas>
       <active-area id="Armario" rectangular="yes" x="783" y="516" width="609" height="489" hasInfluenceArea="no" behaviour="normal">
         <description>
@@ -953,9 +976,7 @@
               <condition />
               <speak-player>Voy al baño a reunirme con los chicos</speak-player>
               <condition />
-              <trigger-scene idTarget="BañoDia3" x="979" y="810" transitionTime="0" transitionType="0" />
-              <condition />
-              <trigger-conversation idTarget="BañoDia4" />
+              <activate flag="RobarPuro" />
               <condition />
             </effect>
           </examine>
@@ -1882,7 +1903,7 @@
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
+    <dialogue-node nodeindex="2" editor-x="523" editor-y="102">
       <speak-char idTarget="Laura">Os dije que se iba a rajar...</speak-char>
       <condition />
       <speak-char idTarget="Carlos">No se está rajando, ¿a que no?</speak-char>
@@ -1899,7 +1920,7 @@
       <condition />
       <child nodeindex="5" />
     </option-node>
-    <dialogue-node nodeindex="4" editor-x="334" editor-y="373">
+    <dialogue-node nodeindex="4" editor-x="315" editor-y="397">
       <speak-char idTarget="Francisco">Estupendo tío, te esperamos en el baño</speak-char>
       <condition />
       <speak-char idTarget="Carlos">No tardes eh</speak-char>
@@ -1908,15 +1929,17 @@
         <effect>
           <activate flag="DecidesRobarPuro" />
           <condition />
+          <activate flag="EsperarBaño" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="83" editor-y="679">
+    <dialogue-node nodeindex="5" editor-x="43" editor-y="667">
       <speak-char idTarget="Francisco">No me lo creo, ¿Nos dejas tirados después de que te hemos acogido desde el primer día?</speak-char>
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
-    <option-node nodeindex="6" preListening="yes" editor-x="333" editor-y="585" x="333" y="585">
+    <option-node nodeindex="6" preListening="yes" editor-x="265" editor-y="641" x="265" y="641">
       <speak-player>Bueno...vale, lo haré</speak-player>
       <condition />
       <child nodeindex="4" />
@@ -1924,7 +1947,7 @@
       <condition />
       <child nodeindex="7" />
     </option-node>
-    <dialogue-node nodeindex="7" editor-x="577" editor-y="482">
+    <dialogue-node nodeindex="7" editor-x="559" editor-y="541">
       <speak-char idTarget="Laura">Vaya pringado</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Joe macho...</speak-char>
@@ -1939,9 +1962,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="BañoDia3" x="400" y="450" transitionTime="0" transitionType="0" />
-          <condition />
-          <trigger-conversation idTarget="BañoDia4" />
+          <activate flag="EsperarBaño" />
           <condition />
         </effect>
       </end-conversation>
