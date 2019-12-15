@@ -382,9 +382,19 @@
           <condition />
         </effect>
       </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <equals var="dia" value="4" />
+          <inactive flag="RobarPuro" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="MadreFinalBueno" />
+          <condition />
+        </effect>
+      </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1061,7 +1071,7 @@
       <character-ref idTarget="Madre" x="781" y="759" scale="0.2932544" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Dia4" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Dia4" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1169,6 +1179,19 @@
     <characters>
       <character-ref idTarget="Laura" x="266" y="520" scale="0.4904056" orientation="0" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Ana" x="182" y="517" scale="0.3355229" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="CasaFinal" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Background.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Madre" x="802" y="533" scale="0.255127" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <atrezzoobject id="PlayButton">
@@ -2357,7 +2380,15 @@
       <condition />
       <speak-char idTarget="Ana">Hola, esa chilena estuvo increíble</speak-char>
       <condition />
-      <speak-player>(CONTINUAR)</speak-player>
+      <speak-player>Jeje... gracias... bueno iba para casa, el partido me ha dejado molido</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Vale, te lo has ganado, nos vemos en clase el lunes</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Toma mi número, mándame un mensaje y te paso las fotos que hice del partido ;)</speak-char>
+      <condition />
+      <speak-player>Eso sería genial, enseguida lo hago</speak-player>
+      <condition />
+      <speak-player>¡Nos vemos!</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -2372,7 +2403,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="429" editor-y="50">
+    <dialogue-node nodeindex="1" editor-x="331" editor-y="47">
       <speak-player>¡¡¡GOOOOOOOOL!!!</speak-player>
       <condition />
       <speak-player>#O Ufff, pero ese esfuerzo me ha dejado reventado...</speak-player>
@@ -2422,8 +2453,39 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="75" editor-y="398">
-      <speak-player>(CONTINUAR)</speak-player>
+    <dialogue-node nodeindex="3" editor-x="61" editor-y="416">
+      <speak-char idTarget="Laura">¡Hola Gabriel! Al final vinimos a verte. Ese gol estuvo muy bien</speak-char>
+      <condition />
+      <speak-player>Bueno... jeje... gracias supongo</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Y como te prometí, ésta es Ana</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Hola </speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Bueno, os dejo que me están esperando en casa, hasta luego ;)</speak-char>
+      <condition />
+      <child nodeindex="4" />
+      <effect>
+        <move-npc idTarget="Laura" x="-300" y="300" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="615" editor-y="416">
+      <speak-player>Eh? Bueno vale, nos vemos el lunes</speak-player>
+      <condition />
+      <speak-char idTarget="Ana">¡Hasta luego!</speak-char>
+      <condition />
+      <speak-player>Bueno... entones...</speak-player>
+      <condition />
+      <speak-char idTarget="Ana">Mira, no te lo tomes a mal, sé que Laura me invitó para juntarnos y que te dijo que yo fumaba</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Pero lo cierto es que lo estoy dejando y no me apetece salir con otro fumador</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Asi que... ya nos veremos por clase ¿Vale?</speak-char>
+      <condition />
+      <speak-player>Oh... vaya... está bien supongo</speak-player>
+      <condition />
+      <speak-player>Hasta el lunes entonces...</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -2447,7 +2509,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="621" editor-y="54">
+    <dialogue-node nodeindex="2" editor-x="794" editor-y="48">
       <speak-char idTarget="Entrenador">Gabriel, jugaste bien, pero el próximo día tienes que entrenar mejor</speak-char>
       <condition />
       <speak-player>#O No tendría que haber fumado entrenando</speak-player>
@@ -2473,15 +2535,131 @@
       </effect>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="38" editor-y="471">
-      <speak-player>(CONTINUAR)</speak-player>
+      <speak-char idTarget="Laura">¡Hola Gabriel! Al final vinimos a verte. Una pena que jugaras tan poco.</speak-char>
+      <condition />
+      <speak-player>Ya... no estaba en muy buena forma</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Bueno, como te prometí, ésta es Ana</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Hola</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Os dejo que me están esperando en casa, hasta luego ;)</speak-char>
+      <condition />
+      <child nodeindex="4" />
+      <effect>
+        <move-npc idTarget="Laura" x="-300" y="300" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="640" editor-y="471">
+      <speak-player>Eh? Bueno vale, nos vemos el lunes</speak-player>
+      <condition />
+      <speak-char idTarget="Ana">¡Hasta luego!</speak-char>
+      <condition />
+      <speak-player>Bueno... entones...</speak-player>
+      <condition />
+      <speak-char idTarget="Ana">Mira, no te lo tomes a mal, sé que Laura me invitó para juntarnos y que te dijo que yo fumaba</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Pero lo cierto es que lo estoy dejando y no me apetece salir con otro fumador</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Asi que... ya nos veremos por clase ¿Vale?</speak-char>
+      <condition />
+      <speak-player>Oh... vaya... está bien supongo</speak-player>
+      <condition />
+      <speak-player>Hasta el lunes entonces...</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PartidoSiSi">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>SiSi</speak-player>
+      <speak-player>*jadeando* No se qué me pasa hoy, me estoy quedando sin aliento enseguida</speak-player>
       <condition />
+      <child nodeindex="1" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena5B" x="632" y="404" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="489" editor-y="50">
+      <speak-player>*Silbato*</speak-player>
+      <condition />
+      <speak-player>(Entrenador): ¡Gabriel! ¿Que te pasa hoy?</speak-player>
+      <condition />
+      <speak-player>(Entrenador): Ven aquí, te voy a cambiar de nuevo por Pedro</speak-player>
+      <condition />
+      <speak-player>#O Vaya liada, no he hecho nada y han gastado dos cambios conmigo</speak-player>
+      <condition />
+      <speak-player>(Tras el partido)</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena1" x="537" y="408" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="945" editor-y="50">
+      <speak-char idTarget="Entrenador">Gabriel, ven aqui por favor, tenemos que hablar</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">¿No hace falta que te recuerde como tuve yo que dejar el fútbol profesional por el tabaco verdad?</speak-char>
+      <condition />
+      <speak-player>No mister, todos conocemos bien la historia...</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">¿Entonces por qué el día del entrenamiento apestaba el vestuario a humo?</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">Deberías tomarte esto más en serio, tienes potencial Gabriel, no lo desperdicies</speak-char>
+      <condition />
+      <speak-player>Ya... lo siento mister, no volverá a ocurrir</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">Anda, ve a casa y reflexiona sobre qué es mas importante para tí</speak-char>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <trigger-scene idTarget="CallePostPartido" x="531" y="402" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="54" editor-y="387">
+      <speak-char idTarget="Laura">Hola Gabriel, al final vinimos a verte</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">¿Estás bien? Jugaste muy poco rato...</speak-char>
+      <condition />
+      <speak-player>Si... es solo que no estoy muy en forma</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Ya... bueno, como prometí aquí está Ana</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Hola</speak-char>
+      <condition />
+      <speak-char idTarget="Laura">Os dejo que me están esperando en casa, hasta luego ;)</speak-char>
+      <condition />
+      <child nodeindex="4" />
+      <effect>
+        <move-npc idTarget="Laura" x="-300" y="300" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="534" editor-y="387">
+      <speak-player>Eh? Bueno vale, nos vemos el lunes</speak-player>
+      <condition />
+      <speak-player>¡Hasta luego!</speak-player>
+      <condition />
+      <speak-player>Bueno... entones...</speak-player>
+      <condition />
+      <speak-player>Mira, no te lo tomes a mal, sé que Laura me invitó para juntarnos y que te dijo que yo fumaba</speak-player>
+      <condition />
+      <speak-player>Pero lo cierto es que lo estoy dejando y no me apetece salir con otro fumador</speak-player>
+      <condition />
+      <speak-player>Asi que... ya nos veremos por clase ¿Vale?</speak-player>
+      <condition />
+      <speak-player>Oh... vaya... está bien supongo</speak-player>
+      <condition />
+      <speak-player>Hasta el lunes entonces...</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MadreFinalBueno">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
