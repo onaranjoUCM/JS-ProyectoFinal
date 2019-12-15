@@ -433,13 +433,14 @@
           <condition />
         </effect>
         <post-effect>
-          <speak-player>Bueno, pues aqui estamos</speak-player>
+          <speak-player>Bueno, pues aquí estamos</speak-player>
           <condition />
           <speak-player>Primer día de clase, espero que no vaya mal</speak-player>
           <condition />
           <speak-player>Aún es pronto, la gente está en el patio. Quizá alguno sea compañero mío.</speak-player>
           <condition />
-          <speak-player>¡Vaya! Por hablar va y suena la campana. Parece que todos suben a clase.</speak-player>
+          <speak-player>¡Vaya! Por hablar, va y suena la campana. 
+Parece que todos suben a clase.</speak-player>
           <condition />
           <activate flag="Inicio" />
           <condition />
@@ -465,7 +466,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Laura" x="1325" y="821" scale="0.5255919" orientation="0" layer="2" hasInfluenceArea="no">
+      <character-ref idTarget="Laura" x="1325" y="823" scale="0.5255919" orientation="0" layer="2" hasInfluenceArea="no">
         <condition>
           <inactive flag="Inicio" />
         </condition>
@@ -1684,7 +1685,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>Bueeeeno</speak-player>
       <condition />
-      <speak-player>¿Que podria hacer con estos 10€? </speak-player>
+      <speak-player>¿Que podría hacer con estos 10€? </speak-player>
       <condition />
       <speak-player>Debo pensar bien en que invertirlo</speak-player>
       <condition />
@@ -1694,7 +1695,7 @@
       <condition />
       <speak-player>Francisco me dijo que me tocaba invitar y no quiero que se enfaden conmigo</speak-player>
       <condition />
-      <speak-player>Ni siquiera tendría por que fumar yo no? Solo invitarles</speak-player>
+      <speak-player>Ni siquiera tendría por que fumar yo. Solo invitarles</speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -1743,7 +1744,7 @@
     <dialogue-node nodeindex="0" editor-x="104" editor-y="50">
       <speak-player>A ver como funciona esto...</speak-player>
       <condition />
-      <speak-player>Aqui</speak-player>
+      <speak-player>Aquí</speak-player>
       <condition />
       <speak-player>¿5€ cuesta la cajetilla? Sale caro esto...</speak-player>
       <condition />
@@ -2061,7 +2062,7 @@
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
-    <option-node nodeindex="6" preListening="yes" editor-x="265" editor-y="641" x="265" y="641">
+    <option-node nodeindex="6" preListening="yes" editor-x="465" editor-y="642" x="465" y="642">
       <speak-player>Bueno... vale, lo haré</speak-player>
       <condition />
       <child nodeindex="4" />
@@ -2069,7 +2070,7 @@
       <condition />
       <child nodeindex="7" />
     </option-node>
-    <dialogue-node nodeindex="7" editor-x="846" editor-y="587">
+    <dialogue-node nodeindex="7" editor-x="755" editor-y="604">
       <speak-char idTarget="Laura">Vaya pringado</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Joe macho...</speak-char>
@@ -2198,7 +2199,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="314" editor-y="54">
+    <dialogue-node nodeindex="1" editor-x="545" editor-y="60">
       <speak-player>Me encontré con unos amigos de clase que estaban fumando</speak-player>
       <condition />
       <speak-player>Se me habrá quedado el olor en el abrigo</speak-player>
@@ -2223,11 +2224,11 @@
   </graph-conversation>
   <graph-conversation id="PartidoInicioConv">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>Bueno hoy es el gran día</speak-player>
+      <speak-player>Bueno, hoy es el gran día</speak-player>
       <condition />
       <speak-player>Vamos a ver que tal se da</speak-player>
       <condition />
-      <speak-char idTarget="Entrenador">¡Hey Gabriel! Ven por aquí un momento que quiero comentarte algo</speak-char>
+      <speak-char idTarget="Entrenador">¡Hey Gabriel! Ven un momento, quiero comentarte algo</speak-char>
       <condition />
       <speak-player>Voy enseguida</speak-player>
       <condition />
@@ -2239,7 +2240,7 @@
       <condition>
         <inactive flag="FumaVestuario" />
       </condition>
-      <speak-char idTarget="Entrenador">Gabriel, últimamente te veo un poco flojo asi que hoy empezarás en el banquillo</speak-char>
+      <speak-char idTarget="Entrenador">Gabriel, últimamente te veo un poco flojo así que hoy empezarás en el banquillo</speak-char>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
@@ -2366,7 +2367,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="395" editor-y="50">
+    <dialogue-node nodeindex="1" editor-x="345" editor-y="43">
       <speak-player>#! ¡¡¡GOOOOOOOOL!!!</speak-player>
       <condition />
       <speak-player>#O (Entrenador): ¡Qué bien está jugando Gabriel! Vaya golazo acaba de meter...</speak-player>
@@ -2379,7 +2380,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="805" editor-y="50">
+    <dialogue-node nodeindex="2" editor-x="765" editor-y="30">
       <speak-player>#! ¡Campeones, campeones!</speak-player>
       <condition />
       <speak-char idTarget="Entrenador">¡Enhorabuena Gabriel, has jugado increiblemente bien!</speak-char>
@@ -2451,20 +2452,20 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="741" editor-y="52">
+    <dialogue-node nodeindex="2" editor-x="599" editor-y="23">
       <speak-char idTarget="Entrenador">Escucha Gabriel, la primera parte jugaste más o menos bien, pero en la segunda te faltó mucho físico</speak-char>
       <condition />
       <speak-player>#O No tendría que haber fumado ayer con Laura...</speak-player>
       <condition />
       <speak-player>Ya míster, me faltaron fuerzas para acabar el partido...</speak-player>
       <condition />
-      <speak-char idTarget="Entrenador">Tomate el fútbol en serio Gabriel, que podrás llegar muy lejos...</speak-char>
+      <speak-char idTarget="Entrenador">Tómate el fútbol en serio Gabriel y podrás llegar muy lejos...</speak-char>
       <condition />
       <speak-char idTarget="Entrenador">El otro día te vi fumando en la estación de autobuses con una chica</speak-char>
       <condition />
-      <speak-char idTarget="Entrenador">Sabes que yo tuve que dejar el fútbol profesional por el eso mismo...</speak-char>
+      <speak-char idTarget="Entrenador">Sabes que yo tuve que dejar el fútbol profesional por eso mismo...</speak-char>
       <condition />
-      <speak-player>Míster me lo tomaré en serio, prometo que eso no volverá a pasar</speak-player>
+      <speak-player>Míster me lo tomaré en serio, prometo que no volverá a pasar</speak-player>
       <condition />
       <speak-char idTarget="Entrenador">Está bien, te tomo la palabra Gabriel</speak-char>
       <condition />
@@ -2495,18 +2496,18 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="615" editor-y="416">
+    <dialogue-node nodeindex="4" editor-x="454" editor-y="396">
       <speak-player>Eh? Bueno vale, nos vemos el lunes</speak-player>
       <condition />
       <speak-char idTarget="Ana">¡Hasta luego!</speak-char>
       <condition />
       <speak-player>Bueno... entones...</speak-player>
       <condition />
-      <speak-char idTarget="Ana">Mira, no te lo tomes a mal, sé que Laura me invitó para juntarnos y que te dijo que yo fumaba</speak-char>
+      <speak-char idTarget="Ana">Mira, no te lo tomes a mal, sé que Laura me invitó para presentarnos y que te dijo que yo fumaba</speak-char>
       <condition />
       <speak-char idTarget="Ana">Pero lo cierto es que lo estoy dejando y no me apetece salir con otro fumador</speak-char>
       <condition />
-      <speak-char idTarget="Ana">Asi que... ya nos veremos por clase ¿Vale?</speak-char>
+      <speak-char idTarget="Ana">Así que... ya nos veremos por clase ¿Vale?</speak-char>
       <condition />
       <speak-player>Oh... vaya... está bien supongo</speak-player>
       <condition />
@@ -2534,14 +2535,14 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="794" editor-y="48">
+    <dialogue-node nodeindex="2" editor-x="660" editor-y="48">
       <speak-char idTarget="Entrenador">Gabriel, jugaste bien, pero el próximo día tienes que entrenar mejor</speak-char>
       <condition />
       <speak-player>#O No tendría que haber fumado entrenando</speak-player>
       <condition />
       <speak-player>Ya míster, el próximo día me esforzaré más</speak-player>
       <condition />
-      <speak-char idTarget="Entrenador">Tomate el fútbol en serio Gabriel, que podrás llegar muy lejos...</speak-char>
+      <speak-char idTarget="Entrenador">Tómate el fútbol en serio Gabriel, que podrás llegar muy lejos...</speak-char>
       <condition />
       <speak-char idTarget="Entrenador">El otro día apestábais todos a tabaco...</speak-char>
       <condition />
@@ -2576,18 +2577,18 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="640" editor-y="471">
+    <dialogue-node nodeindex="4" editor-x="376" editor-y="393">
       <speak-player>Eh? Bueno vale, nos vemos el lunes</speak-player>
       <condition />
       <speak-char idTarget="Ana">¡Hasta luego!</speak-char>
       <condition />
-      <speak-player>Bueno... entones...</speak-player>
+      <speak-player>Bueno... entonces...</speak-player>
       <condition />
-      <speak-char idTarget="Ana">Mira, no te lo tomes a mal, sé que Laura me invitó para juntarnos y que te dijo que yo fumaba</speak-char>
+      <speak-char idTarget="Ana">Mira, no te lo tomes a mal, sé que Laura me invitó para presentarnos y que te dijo que yo fumaba</speak-char>
       <condition />
       <speak-char idTarget="Ana">Pero lo cierto es que lo estoy dejando y no me apetece salir con otro fumador</speak-char>
       <condition />
-      <speak-char idTarget="Ana">Asi que... ya nos veremos por clase ¿Vale?</speak-char>
+      <speak-char idTarget="Ana">Así que... ya nos veremos por clase ¿Vale?</speak-char>
       <condition />
       <speak-player>Oh... vaya... está bien supongo</speak-player>
       <condition />
@@ -2606,7 +2607,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="489" editor-y="50">
+    <dialogue-node nodeindex="1" editor-x="297" editor-y="107">
       <speak-player>*Silbato*</speak-player>
       <condition />
       <speak-player>(Entrenador): ¡Gabriel! ¿Que te pasa hoy?</speak-player>
@@ -2623,8 +2624,8 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="945" editor-y="50">
-      <speak-char idTarget="Entrenador">Gabriel, ven aqui por favor, tenemos que hablar</speak-char>
+    <dialogue-node nodeindex="2" editor-x="583" editor-y="93">
+      <speak-char idTarget="Entrenador">Gabriel, ven aquí por favor, tenemos que hablar</speak-char>
       <condition />
       <speak-char idTarget="Entrenador">¿No hace falta que te recuerde como tuve yo que dejar el fútbol profesional por el tabaco verdad?</speak-char>
       <condition />
@@ -2663,18 +2664,18 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="534" editor-y="387">
+    <dialogue-node nodeindex="4" editor-x="395" editor-y="450">
       <speak-player>Eh? Bueno vale, nos vemos el lunes</speak-player>
       <condition />
       <speak-player>¡Hasta luego!</speak-player>
       <condition />
       <speak-player>Bueno... entones...</speak-player>
       <condition />
-      <speak-player>Mira, no te lo tomes a mal, sé que Laura me invitó para juntarnos y que te dijo que yo fumaba</speak-player>
+      <speak-player>Mira, no te lo tomes a mal, sé que Laura me invitó para presentarnos y que te dijo que yo fumaba</speak-player>
       <condition />
       <speak-player>Pero lo cierto es que lo estoy dejando y no me apetece salir con otro fumador</speak-player>
       <condition />
-      <speak-player>Asi que... ya nos veremos por clase ¿Vale?</speak-player>
+      <speak-player>Así que... ya nos veremos por clase ¿Vale?</speak-player>
       <condition />
       <speak-player>Oh... vaya... está bien supongo</speak-player>
       <condition />
