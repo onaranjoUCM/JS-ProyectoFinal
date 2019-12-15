@@ -294,7 +294,7 @@
   </character>
   <character id="Ana">
     <resources name="No name">
-      <asset type="standup" uri="assets/animation/MariaIdleUp.eaa.xml" />
+      <asset type="standup" uri="assets/animation/AnaAnim.eaa.xml" />
       <asset type="standdown" uri="assets/special/EmptyAnimation" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
@@ -384,7 +384,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1061,7 +1061,7 @@
       <character-ref idTarget="Madre" x="781" y="759" scale="0.2932544" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Dia4" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Dia4" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -1071,15 +1071,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="no" x="999" y="698" width="228" height="103" hasInfluenceArea="no" idTarget="Partido" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="999" y="688" width="236" height="113" hasInfluenceArea="no" idTarget="PartidoEscena1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
-        <point x="1124" y="801" />
-        <point x="1227" y="754" />
-        <point x="1121" y="698" />
-        <point x="1114" y="724" />
-        <point x="999" y="727" />
-        <point x="1001" y="778" />
-        <point x="1111" y="771" />
+        <post-effect>
+          <trigger-conversation idTarget="PartidoInicioConv" />
+          <condition />
+        </post-effect>
       </exit>
     </exits>
     <atrezzo>
@@ -1087,15 +1084,92 @@
       <atrezzo-ref idTarget="DiaSiguienteText" x="691" y="580" scale="1" layer="0" />
     </atrezzo>
   </scene>
-  <scene id="Partido" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="PartidoEscena1" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/futbol.png" />
+      <asset type="background" uri="assets/background/vestuario4.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Entrenador" x="290" y="521" scale="0.197975" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="PartidoEscena2A" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/partidoEscena2A.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="PartidoEscena2B" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/partidoEscena2B.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="PartidoEscena3" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/partidoEscena3.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="PartidoEscena4" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/partidoEscena4Temp.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="PartidoEscena5A" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/PartidoEscena5A.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="PartidoEscena5B" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/partidoEscena5.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="CallePostPartido" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/ciudad.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Laura" x="266" y="520" scale="0.4904056" orientation="0" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Ana" x="182" y="517" scale="0.3355229" orientation="0" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <atrezzoobject id="PlayButton">
     <resources name="No name">
@@ -1474,9 +1548,9 @@
       <condition />
       <speak-char idTarget="Entrenador">Es importante entrenar para afrontar el partido preparados</speak-char>
       <condition />
-      <speak-player>(Tengo que darlo todo si quiero jugar el partido)</speak-player>
+      <speak-player>#O Tengo que darlo todo si quiero jugar el partido</speak-player>
       <condition />
-      <speak-player>(Vamos a empezar)</speak-player>
+      <speak-player>#O Vamos a empezar</speak-player>
       <condition />
       <child nodeindex="1" />
       <effect>
@@ -1484,7 +1558,7 @@
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="286" editor-y="30">
+    <dialogue-node nodeindex="1" editor-x="731" editor-y="73">
       <speak-player>(Voy a darle más caña)</speak-player>
       <condition>
         <inactive flag="FumaVestuario" />
@@ -1497,15 +1571,15 @@
       <condition>
         <inactive flag="FumaVestuario" />
       </condition>
-      <speak-player>(Me está costando un poco respirar...)</speak-player>
+      <speak-player>#O Me está costando un poco respirar...</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-player>(...no voy a poder seguir este ritmo...)</speak-player>
+      <speak-player>#O ...no voy a poder seguir este ritmo...</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-player>(Necesito parar)</speak-player>
+      <speak-player>#O Necesito parar</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
@@ -1703,7 +1777,7 @@
       <condition />
       <child nodeindex="2" />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="520" editor-y="50">
+    <dialogue-node nodeindex="2" editor-x="744" editor-y="46">
       <speak-char idTarget="Laura">Quedan 10 minutos para que llegue el bus, da tiempo a fumar un cigarro </speak-char>
       <condition />
       <speak-char idTarget="Laura">¿Me acompañas? </speak-char>
@@ -1720,7 +1794,7 @@
       <condition />
       <child nodeindex="5" />
     </option-node>
-    <dialogue-node nodeindex="4" editor-x="539" editor-y="329">
+    <dialogue-node nodeindex="4" editor-x="734" editor-y="292">
       <speak-char idTarget="Laura">Estupendo</speak-char>
       <condition />
       <speak-char idTarget="Laura">Da gusto pasar el rato contigo</speak-char>
@@ -2072,7 +2146,7 @@
       <condition />
       <speak-player>¿Hu-humo?</speak-player>
       <condition />
-      <speak-player>(No puedo contarlelo que ha pasado, y menos el dia antes del partido...me mataría)</speak-player>
+      <speak-player>#O No puedo contarlelo que ha pasado, y menos el dia antes del partido...me mataría</speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -2099,23 +2173,315 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Partido1">
+  <graph-conversation id="PartidoInicioConv">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>Bueno hoy es el gran día</speak-player>
+      <condition />
+      <speak-player>Vamos a ver que tal se da</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">¡Hey Gabriel! Ven por aquí un momento que quiero comentarte algo</speak-char>
+      <condition />
+      <speak-player>Voy enseguida</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">Gabriel, el otro día entrenaste muy bien así que te voy a sacar de titular</speak-char>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>Eso es genial mister, ¡No te defrauraré!</speak-player>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-char idTarget="Entrenador">Gabriel, últimamente te veo un poco flojo asi que hoy empezarás en el banquillo</speak-char>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>Vale míster, sé que el otro día no entrené bien, ¿Voy a jugar en la segunda parte?</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-char idTarget="Entrenador">A lo mejor, depende de cómo se desarrolle el partido</speak-char>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-char idTarget="Entrenador">Y ahora venga, ve a prepararte que el partido está a punto de empezar</speak-char>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena2A" x="632" y="404" transitionTime="0" transitionType="0" />
+        <condition>
+          <inactive flag="FumaVestuario" />
+        </condition>
+        <trigger-scene idTarget="PartidoEscena2B" x="631" y="403" transitionTime="0" transitionType="0" />
+        <condition>
+          <active flag="FumaVestuario" />
+        </condition>
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="292" editor-y="61">
+      <speak-player>#O El partido está siendo duro pero vamos bien</speak-player>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>#O Si me esfuerzo un poco mas quizá podemos llegar al descanso con ventaja</speak-player>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>#O Parece que les está costando...</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>#O Ojalá pudiera estar ahí fuera para echarles una mano...</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <child nodeindex="2" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena3" x="633" y="396" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="552" editor-y="42">
+      <speak-player>#! (Árbitro): ¡Tiempo!</speak-player>
+      <condition />
+      <speak-player>#O *jadeando* Ufff... Parece que vamos bien...</speak-player>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>#O Si seguimos así podemos ganar el partido</speak-player>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>#O Ufff.. menos mal por fin el descanso...</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>#! ¡Animo chicos, podeis remontar!</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <child nodeindex="3" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena4" x="632" y="404" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="836" editor-y="49">
+      <speak-player>#O Estamos teniendo ocasiones pero no logramos marcar</speak-player>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>#O ¿Tal vez si intento...?</speak-player>
+      <condition>
+        <inactive flag="FumaVestuario" />
+      </condition>
+      <speak-player>#! *silbato*</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <speak-player>(Entrenador): ¡Cambio! Gabriel, te toca salir a jugar, ¡Dalo todo!</speak-player>
+      <condition>
+        <active flag="FumaVestuario" />
+      </condition>
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="PartidoNoNo" />
+          <condition>
+            <inactive flag="FumaVestuario" />
+            <inactive flag="FumaParadaBus" />
+          </condition>
+          <trigger-conversation idTarget="PartidoNoSi" />
+          <condition>
+            <inactive flag="FumaVestuario" />
+            <active flag="FumaParadaBus" />
+          </condition>
+          <trigger-conversation idTarget="PartidoSiNo" />
+          <condition>
+            <active flag="FumaVestuario" />
+            <inactive flag="FumaParadaBus" />
+          </condition>
+          <trigger-conversation idTarget="PartidoSiSi" />
+          <condition>
+            <active flag="FumaVestuario" />
+            <active flag="FumaParadaBus" />
+          </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PartidoNoNo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>#! ¡Toma chilena!</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena5A" x="629" y="458" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="395" editor-y="50">
+      <speak-player>#! ¡¡¡GOOOOOOOOL!!!</speak-player>
+      <condition />
+      <speak-player>#O (Entrenador): ¡Qué bien está jugando Gabriel! Vaya golazo acaba de meter...</speak-player>
+      <condition />
+      <speak-player>(Al acabar el partido)</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena1" x="537" y="408" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="805" editor-y="50">
+      <speak-player>#! ¡Campeones, campeones!</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">¡Enhorabuena Gabriel, has jugado increiblemente bien!</speak-char>
+      <condition />
+      <speak-player>Si sigues tomándote en serio el fútbol, podrás llegar lejos</speak-player>
+      <condition />
+      <speak-player>Muchas gracias míster, mi sueño es ser jugador profesional, seguiré así!</speak-player>
+      <condition />
+      <speak-player>#O El partido me ha dejado roto, será mejor que me cambie y me vaya a descansar</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <trigger-scene idTarget="CallePostPartido" x="531" y="402" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="65" editor-y="349">
+      <speak-char idTarget="Laura">¡Hola Gabriel! Al final vinimos a verte. ¡Lo hiciste genial!</speak-char>
+      <condition />
+      <speak-player>Vaya... jeje... bueno, gracias</speak-player>
+      <condition />
+      <speak-char idTarget="Laura">Y como te prometí, ésta es Ana</speak-char>
+      <condition />
+      <speak-char idTarget="Ana">Hola, esa chilena estuvo increíble</speak-char>
+      <condition />
+      <speak-player>(CONTINUAR)</speak-player>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Partido2">
+  <graph-conversation id="PartidoNoSi">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>#O ¡Toma chilena!</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena5A" x="629" y="458" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="429" editor-y="50">
+      <speak-player>¡¡¡GOOOOOOOOL!!!</speak-player>
+      <condition />
+      <speak-player>#O Ufff, pero ese esfuerzo me ha dejado reventado...</speak-player>
+      <condition />
+      <speak-player>(Jadea)</speak-player>
+      <condition />
+      <speak-player>#! *silbato*</speak-player>
+      <condition />
+      <speak-player>(Entrenador): ¡Cambio! Gabriel, ven aquí que te veo cansado, Pedro va a salir por ti</speak-player>
+      <condition />
+      <speak-player>(Entrenador): Buen gol Gabriel, puede que nos haya dado el partido</speak-player>
+      <condition />
+      <speak-player>Gracias mister, pero me encuentro sin aliento, no creo que hubiera podido seguir mucho mas</speak-player>
+      <condition />
+      <speak-player>(Tras el partido)</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena1" x="537" y="408" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="741" editor-y="52">
+      <speak-char idTarget="Entrenador">Escucha Gabriel, la primera parte jugaste más o menos bien, pero en la segunda te faltó mucho físico</speak-char>
+      <condition />
+      <speak-player>#O No tendría que haber fumado ayer con Laura...</speak-player>
+      <condition />
+      <speak-player>Ya míster, me faltaron fuerzas para acabar el partido...</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">Tomate el fútbol en serio Gabriel, que podrás llegar muy lejos...</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">El otro día te vi fumando en la estación de autobuses con una chica</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">Sabes que yo tuve que dejar el fútbol profesional por el eso mismo...</speak-char>
+      <condition />
+      <speak-player>Míster me lo tomaré en serio, prometo que eso no volverá a pasar</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">Está bien, te tomo la palabra Gabriel</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">Anda, ve a casa y descansa, ya nos veremos en el próximo entrenamiento</speak-char>
+      <condition />
+      <speak-player>Está bien...</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <trigger-scene idTarget="CallePostPartido" x="531" y="402" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="75" editor-y="398">
+      <speak-player>(CONTINUAR)</speak-player>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Partido3">
+  <graph-conversation id="PartidoSiNo">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>#! ¡Vamos, podemos recuperar esto!</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena5B" x="632" y="404" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="365" editor-y="50">
+      <speak-player>(EXTENDER DEPENDE DE SI GANAN O PIERDEN)</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <effect>
+        <trigger-scene idTarget="PartidoEscena1" x="537" y="408" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="621" editor-y="54">
+      <speak-char idTarget="Entrenador">Gabriel, jugaste bien, pero el próximo día tienes que entrenar mejor</speak-char>
+      <condition />
+      <speak-player>#O No tendría que haber fumado entrenando</speak-player>
+      <condition />
+      <speak-player>Ya míster, el próximo día me esforzaré más</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">Tomate el fútbol en serio Gabriel, que podrás llegar muy lejos...</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">El otro día apestábais todos a tabaco...</speak-char>
+      <condition />
+      <speak-char idTarget="Entrenador">Sabes que yo tuve que dejar el fútbol profesional por el tabaco...</speak-char>
+      <condition />
+      <speak-player>Míster yo sólo le dí dos caladas...pero no volverá a pasar</speak-player>
+      <condition />
+      <speak-char idTarget="Entrenador">Confío en que eso sea cierto... Anda ve a casa y descansa</speak-char>
+      <condition />
+      <speak-player>Esta bien...</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <trigger-scene idTarget="CallePostPartido" x="531" y="402" transitionTime="0" transitionType="0" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="38" editor-y="471">
+      <speak-player>(CONTINUAR)</speak-player>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Partido4">
+  <graph-conversation id="PartidoSiSi">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>SiSi</speak-player>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
