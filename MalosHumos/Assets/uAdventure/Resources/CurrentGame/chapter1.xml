@@ -65,7 +65,7 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="CampoFutbol1" />
+          <equals var="dia" value="2" />
         </condition>
         <effect>
           <trigger-conversation idTarget="LauraParadaConv" />
@@ -78,6 +78,16 @@
         </condition>
         <effect>
           <trigger-conversation idTarget="Escena_primera" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="MadreConvD3" />
+          <inactive flag="RobarPuro" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="PatioDia3" />
           <condition />
         </effect>
       </talk-to>
@@ -214,6 +224,16 @@
         </condition>
         <effect>
           <trigger-conversation idTarget="PatioDia2" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="MadreConvD3" />
+          <inactive flag="RobarPuro" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="PatioDia3" />
           <condition />
         </effect>
       </talk-to>
@@ -357,6 +377,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
           <equals var="dia" value="2" />
+          <inactive flag="MadreConvD2" />
         </condition>
         <effect>
           <trigger-conversation idTarget="MadreDia2" />
@@ -366,6 +387,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
           <inactive flag="MadreConvD3" />
+          <equals var="dia" value="3" />
         </condition>
         <effect>
           <trigger-conversation idTarget="MadreDia3Ini" />
@@ -864,6 +886,9 @@
     <exits>
       <exit rectangular="yes" x="1381" y="557" width="266" height="183" hasInfluenceArea="no" idTarget="Escaleras2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="EsperarBaño" />
+        </condition>
       </exit>
     </exits>
     <characters>
@@ -894,9 +919,6 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="443" y="579" width="479" height="340" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
       <exit rectangular="yes" x="1702" y="213" width="221" height="705" hasInfluenceArea="no" idTarget="DespachoDirector" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
@@ -910,8 +932,11 @@
           <condition />
         </post-effect>
       </exit>
-      <exit rectangular="yes" x="732" y="23" width="343" height="307" hasInfluenceArea="no" idTarget="PasilloDia3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="752" y="48" width="312" height="247" hasInfluenceArea="no" idTarget="PasilloDia3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="RobarPuro" />
+        </condition>
       </exit>
     </exits>
   </scene>
@@ -1755,11 +1780,11 @@
       <condition />
       <speak-char idTarget="Laura">Hola Gabriel, ¿Vas a pillar el bus?</speak-char>
       <condition />
-      <speak-player>Si, acabo de salir de entrenar, esta semana tenemos partido </speak-player>
+      <speak-player>Si, ¿tu también?</speak-player>
       <condition />
       <speak-player>Voy a pillar el 581 para ir a casa</speak-player>
       <condition />
-      <speak-char idTarget="Laura">Yo espero el 627,voy a casa de mi amiga Ana</speak-char>
+      <speak-char idTarget="Laura">Yo espero el 627, voy a casa de mi amiga Ana</speak-char>
       <condition />
       <speak-player>¿Ana?¿Va a nuestro instituto?</speak-player>
       <condition />
@@ -1969,9 +1994,9 @@
       <condition />
       <speak-char idTarget="Laura">Antes han pasado por aquí unos profesores hablando sobre el director</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Hablaban sobre su adicción a los puros</speak-char>
+      <speak-char idTarget="Laura">Hablaban sobre su afición a los puros</speak-char>
       <condition />
-      <speak-char idTarget="Francisco">Y resulta que hoy el director tiene una excrsión con los de biología de Bachillerato</speak-char>
+      <speak-char idTarget="Francisco">Y resulta que hoy el director tiene una excursión con los de biología de Bachillerato</speak-char>
       <condition />
       <speak-char idTarget="Carlos">Según lo que hemos oído, se deja algunos puros en su despacho siempre y se nos ha ocurrido...</speak-char>
       <condition />
@@ -1984,11 +2009,11 @@
     <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
       <speak-char idTarget="Laura">Exacto, en tomar prestado uno para probarlo</speak-char>
       <condition />
-      <speak-char idTarget="Carlos">Fumar un puro...pareceríamos superadultos y superguays</speak-char>
+      <speak-char idTarget="Carlos">Fumar un puro... pareceríamos superadultos y  superguays</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Si...Ya me estoy imaginando</speak-char>
       <condition />
-      <speak-player>No se chicos...colarnos en el despacho del director...¿No hay cámaras?</speak-player>
+      <speak-player>No se chicos... colarnos en el despacho del director... ¿No hay cámaras?</speak-player>
       <condition />
       <speak-char idTarget="Francisco">Qué cámaras ni que niño muerto, ¿estás con nosotros?</speak-char>
       <condition />
@@ -2017,7 +2042,7 @@
       <condition />
       <child nodeindex="5" />
     </option-node>
-    <dialogue-node nodeindex="4" editor-x="315" editor-y="397">
+    <dialogue-node nodeindex="4" editor-x="781" editor-y="326">
       <speak-char idTarget="Francisco">Estupendo tío, te esperamos en el baño</speak-char>
       <condition />
       <speak-char idTarget="Carlos">No tardes eh</speak-char>
@@ -2037,14 +2062,14 @@
       <child nodeindex="6" />
     </dialogue-node>
     <option-node nodeindex="6" preListening="yes" editor-x="265" editor-y="641" x="265" y="641">
-      <speak-player>Bueno...vale, lo haré</speak-player>
+      <speak-player>Bueno... vale, lo haré</speak-player>
       <condition />
       <child nodeindex="4" />
       <speak-player>Lo siento...</speak-player>
       <condition />
       <child nodeindex="7" />
     </option-node>
-    <dialogue-node nodeindex="7" editor-x="559" editor-y="541">
+    <dialogue-node nodeindex="7" editor-x="846" editor-y="587">
       <speak-char idTarget="Laura">Vaya pringado</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Joe macho...</speak-char>
@@ -2466,7 +2491,7 @@
       <condition />
       <child nodeindex="4" />
       <effect>
-        <move-npc idTarget="Laura" x="-300" y="300" />
+        <move-npc idTarget="Laura" x="-300" y="100" />
         <condition />
       </effect>
     </dialogue-node>
@@ -2547,7 +2572,7 @@
       <condition />
       <child nodeindex="4" />
       <effect>
-        <move-npc idTarget="Laura" x="-300" y="300" />
+        <move-npc idTarget="Laura" x="-300" y="100" />
         <condition />
       </effect>
     </dialogue-node>
@@ -2634,7 +2659,7 @@
       <condition />
       <child nodeindex="4" />
       <effect>
-        <move-npc idTarget="Laura" x="-300" y="300" />
+        <move-npc idTarget="Laura" x="-300" y="100" />
         <condition />
       </effect>
     </dialogue-node>
