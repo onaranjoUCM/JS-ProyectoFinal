@@ -1232,7 +1232,7 @@ Parece que todos suben a clase.</speak-player>
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="1107" y="769" width="158" height="74" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
         <effect>
           <set-value var="dia" value="1" />
           <condition />
@@ -1492,14 +1492,14 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="802" editor-y="43">
+    <dialogue-node nodeindex="3" editor-x="536" editor-y="52">
       <speak-char idTarget="Francisco">A que no era para tanto</speak-char>
       <condition />
       <speak-char idTarget="Laura">A mi me engachó Paco el año pasado y me salvó la vida, me relaja un montón</speak-char>
       <condition />
       <speak-char idTarget="Francisco">¿Y tú Gabriel?</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Paco es muy pesado, no te va a dejar en paz hasta que no les una calada por lo menos</speak-char>
+      <speak-char idTarget="Laura">Paco es muy pesado, no te va a dejar en paz hasta que no des una calada por lo menos</speak-char>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
@@ -1947,7 +1947,7 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-char idTarget="Francisco">¿Que, al final le has cogido gusto a venir aquí después de clase verdad?</speak-char>
       <condition />
-      <speak-char idTarget="Francisco">Venga, hoy te tocaba invitar, déjate un cigarro</speak-char>
+      <speak-char idTarget="Francisco">Venga, hoy te tocaba invitar, pasa un cigarro</speak-char>
       <condition />
       <speak-char idTarget="Francisco">¿Tienes no?</speak-char>
       <condition />
@@ -1959,7 +1959,7 @@ Parece que todos suben a clase.</speak-player>
       <condition>
         <inactive flag="CompraCigarros" />
       </condition>
-      <speak-char idTarget="Francisco">Pues vas a tener que devolvernosla, que los cigarros no los regalan ¿Sabes?</speak-char>
+      <speak-char idTarget="Francisco">Pues vas a tener que devolvérnosla, que los cigarros no los regalan ¿Sabes?</speak-char>
       <condition>
         <inactive flag="CompraCigarros" />
       </condition>
@@ -1967,7 +1967,7 @@ Parece que todos suben a clase.</speak-player>
       <condition>
         <active flag="CompraCigarros" />
       </condition>
-      <speak-char idTarget="Francisco">Asi me gusta. Ven, vamos a relajarnos un rato.</speak-char>
+      <speak-char idTarget="Francisco">Así me gusta. Ven, vamos a relajarnos un rato.</speak-char>
       <condition>
         <active flag="CompraCigarros" />
       </condition>
@@ -2048,7 +2048,7 @@ Parece que todos suben a clase.</speak-player>
     <dialogue-node nodeindex="1" editor-x="285" editor-y="50">
       <speak-char idTarget="Laura">Exacto, en tomar prestado uno para probarlo</speak-char>
       <condition />
-      <speak-char idTarget="Carlos">Fumar un puro... pareceríamos superadultos y  superguays</speak-char>
+      <speak-char idTarget="Carlos">Fumar un puro... pareceríamos gente chula y superguays</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Si...Ya me estoy imaginando</speak-char>
       <condition />
@@ -2108,7 +2108,7 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <child nodeindex="7" />
     </option-node>
-    <dialogue-node nodeindex="7" editor-x="755" editor-y="604">
+    <dialogue-node nodeindex="7" editor-x="754" editor-y="548">
       <speak-char idTarget="Laura">Vaya pringado</speak-char>
       <condition />
       <speak-char idTarget="Francisco">Joe macho...</speak-char>
@@ -2142,7 +2142,7 @@ Parece que todos suben a clase.</speak-player>
   </graph-conversation>
   <graph-conversation id="BañoDia4">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-char idTarget="Francisco">Vale pues ya tenemos el puro</speak-char>
+      <speak-char idTarget="Francisco">Vale, pues ya tenemos el puro</speak-char>
       <condition />
       <speak-char idTarget="Laura">No gracias a Gabriel</speak-char>
       <condition>
@@ -2207,7 +2207,7 @@ Parece que todos suben a clase.</speak-player>
     <dialogue-node nodeindex="3" editor-x="299" editor-y="325">
       <speak-char idTarget="Francisco">Tío eres un coñazo de verdad</speak-char>
       <condition />
-      <speak-char idTarget="Laura">Largate anda, que nos cortas el rollo</speak-char>
+      <speak-char idTarget="Laura">Lárgate anda, que nos cortas el rollo</speak-char>
       <condition />
       <speak-player>Vale...</speak-player>
       <condition />
@@ -2227,13 +2227,13 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-char idTarget="Madre">Oye una cosa...</speak-char>
       <condition />
-      <speak-char idTarget="Madre">¿Que es ese olor que traes?</speak-char>
+      <speak-char idTarget="Madre">¿Qué es ese olor que traes?</speak-char>
       <condition />
       <speak-char idTarget="Madre">Es como...humo</speak-char>
       <condition />
       <speak-player>¿Hu-humo?</speak-player>
       <condition />
-      <speak-player>#O No puedo contarlelo que ha pasado, y menos el dia antes del partido...me mataría</speak-player>
+      <speak-player>#O No puedo contarlelo que ha pasado, y menos el día antes del partido...me mataría</speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -2261,7 +2261,7 @@ Parece que todos suben a clase.</speak-player>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PartidoInicioConv">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="20" editor-y="583">
       <speak-player>Bueno, hoy es el gran día</speak-player>
       <condition />
       <speak-player>Vamos a ver que tal se da</speak-player>
@@ -2304,7 +2304,7 @@ Parece que todos suben a clase.</speak-player>
         </condition>
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="292" editor-y="61">
+    <dialogue-node nodeindex="1" editor-x="82" editor-y="61">
       <speak-player>#O El partido está siendo duro pero vamos bien</speak-player>
       <condition>
         <inactive flag="FumaVestuario" />
@@ -2327,7 +2327,7 @@ Parece que todos suben a clase.</speak-player>
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="552" editor-y="42">
+    <dialogue-node nodeindex="2" editor-x="464" editor-y="57">
       <speak-player>#! (Árbitro): ¡Tiempo!</speak-player>
       <condition />
       <speak-player>#O *jadeando* Ufff... Parece que vamos bien...</speak-player>
@@ -2342,7 +2342,7 @@ Parece que todos suben a clase.</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-player>#! ¡Animo chicos, podeis remontar!</speak-player>
+      <speak-player>#! ¡Ánimo chicos, podéis remontar!</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
@@ -2352,7 +2352,7 @@ Parece que todos suben a clase.</speak-player>
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="836" editor-y="49">
+    <dialogue-node nodeindex="3" editor-x="695" editor-y="192">
       <speak-player>#O Estamos teniendo ocasiones pero no logramos marcar</speak-player>
       <condition>
         <inactive flag="FumaVestuario" />
@@ -2365,7 +2365,7 @@ Parece que todos suben a clase.</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
-      <speak-player>(Entrenador): ¡Cambio! Gabriel, te toca salir a jugar, ¡Dalo todo!</speak-player>
+      <speak-player>(Entrenador): ¡Cambio! Gabriel, te toca salir a jugar, ¡Confío en tí!</speak-player>
       <condition>
         <active flag="FumaVestuario" />
       </condition>
@@ -2819,7 +2819,7 @@ Parece que todos suben a clase.</speak-player>
     <dialogue-node nodeindex="1" editor-x="505" editor-y="50">
       <speak-char idTarget="Madre">Escucha Gabriel... tenemos que hablar</speak-char>
       <condition />
-      <speak-char idTarget="Madre">Ha llegado una carta de la Policía diciendo que te grabaron robando en el colegio</speak-char>
+      <speak-char idTarget="Madre">Ha llegado una carta de la Policía diciendo que te grabaron robando en el instituto</speak-char>
       <condition />
       <speak-player>¿Es eso cierto?</speak-player>
       <condition />
@@ -2829,13 +2829,13 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-player>No tenía elección...</speak-player>
       <condition />
-      <speak-char idTarget="Madre">Hijo, ¿Pero como se te ocurre?</speak-char>
+      <speak-char idTarget="Madre">Hijo, ¿Pero cómo se te ocurre?</speak-char>
       <condition />
       <speak-char idTarget="Madre">Ahora tenemos que pagar una multa, y da gracias si no te expulsan nada más empezar en el nuevo colegio</speak-char>
       <condition />
       <speak-char idTarget="Madre">Vete a tu cuarto, ya hablaremos más tarde</speak-char>
       <condition />
-      <speak-player>Esta bien...</speak-player>
+      <speak-player>Está bien...</speak-player>
       <condition />
       <end-conversation>
         <effect>
@@ -2896,7 +2896,7 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-player>No tenía elección...</speak-player>
       <condition />
-      <speak-player>Hijo, ¿Pero como se te ocurre?</speak-player>
+      <speak-player>Hijo, ¿Pero cómo se te ocurre?</speak-player>
       <condition />
       <speak-player>Ahora tenemos que pagar una multa, y da gracias si no te expulsan nada más empezar en el nuevo colegio</speak-player>
       <condition />
