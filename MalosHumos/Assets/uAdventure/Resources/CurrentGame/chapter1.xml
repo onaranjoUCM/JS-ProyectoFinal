@@ -411,7 +411,7 @@
           <inactive flag="RobarPuro" />
         </condition>
         <effect>
-          <trigger-conversation idTarget="MadreFinalBueno" />
+          <trigger-conversation idTarget="MadreFinalNoNo" />
           <condition />
         </effect>
       </talk-to>
@@ -1221,6 +1221,29 @@ Parece que todos suben a clase.</speak-player>
       <character-ref idTarget="Madre" x="802" y="533" scale="0.255127" orientation="0" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
+  <scene id="Creditos" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/black.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1107" y="769" width="158" height="74" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+        <effect>
+          <set-value var="dia" value="1" />
+          <condition />
+        </effect>
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="Credits" x="641" y="865" scale="1.70986" layer="0" />
+      <atrezzo-ref idTarget="Flecha" x="1182" y="863" scale="0.4225171" layer="1" />
+    </atrezzo>
+  </scene>
   <atrezzoobject id="PlayButton">
     <resources name="No name">
       <asset type="image" uri="assets/image/playButton.png" />
@@ -1308,6 +1331,20 @@ Parece que todos suben a clase.</speak-player>
   <atrezzoobject id="IraCasaTxt">
     <resources name="No name">
       <asset type="image" uri="assets/image/Imagen1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Credits">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Captura.jpg" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -2417,7 +2454,20 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-player>¡Nos vemos!</speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="CasaFinal" x="1024" y="470" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="MadreFinalNoNo" />
+          <condition>
+            <inactive flag="RobarPuro" />
+          </condition>
+          <trigger-conversation idTarget="MadreFinalNoSi" />
+          <condition>
+            <active flag="RobarPuro" />
+          </condition>
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PartidoNoSi">
@@ -2514,7 +2564,20 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-player>Hasta el lunes entonces...</speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="CasaFinal" x="1024" y="470" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="MadreFinalNoNo" />
+          <condition>
+            <inactive flag="RobarPuro" />
+          </condition>
+          <trigger-conversation idTarget="MadreFinalNoSi" />
+          <condition>
+            <active flag="RobarPuro" />
+          </condition>
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PartidoSiNo">
@@ -2525,10 +2588,20 @@ Parece que todos suben a clase.</speak-player>
       <effect>
         <trigger-scene idTarget="PartidoEscena5B" x="632" y="404" transitionTime="0" transitionType="0" />
         <condition />
+        <wait-time time="3" />
+        <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="365" editor-y="50">
-      <speak-player>(EXTENDER DEPENDE DE SI GANAN O PIERDEN)</speak-player>
+    <dialogue-node nodeindex="1" editor-x="274" editor-y="54">
+      <speak-player>#O No hay manera, defienden muy bien</speak-player>
+      <condition />
+      <speak-player>#O Ya casi ha acabado el partido...</speak-player>
+      <condition />
+      <speak-player>#O Tendremos que conformarnos con el empate...</speak-player>
+      <condition />
+      <speak-player>*silbato*</speak-player>
+      <condition />
+      <speak-player>En fin... hice lo que pude</speak-player>
       <condition />
       <child nodeindex="2" />
       <effect>
@@ -2578,7 +2651,7 @@ Parece que todos suben a clase.</speak-player>
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="376" editor-y="393">
+    <dialogue-node nodeindex="4" editor-x="368" editor-y="437">
       <speak-player>Eh? Bueno vale, nos vemos el lunes</speak-player>
       <condition />
       <speak-char idTarget="Ana">¡Hasta luego!</speak-char>
@@ -2595,7 +2668,20 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-player>Hasta el lunes entonces...</speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="CasaFinal" x="1024" y="470" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="MadreFinalSiNo" />
+          <condition>
+            <inactive flag="RobarPuro" />
+          </condition>
+          <trigger-conversation idTarget="MadreFinalSiSi" />
+          <condition>
+            <active flag="RobarPuro" />
+          </condition>
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="PartidoSiSi">
@@ -2608,7 +2694,7 @@ Parece que todos suben a clase.</speak-player>
         <condition />
       </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="297" editor-y="107">
+    <dialogue-node nodeindex="1" editor-x="292" editor-y="67">
       <speak-player>*Silbato*</speak-player>
       <condition />
       <speak-player>(Entrenador): ¡Gabriel! ¿Que te pasa hoy?</speak-player>
@@ -2682,12 +2768,148 @@ Parece que todos suben a clase.</speak-player>
       <condition />
       <speak-player>Hasta el lunes entonces...</speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="CasaFinal" x="1024" y="470" transitionTime="0" transitionType="0" />
+          <condition />
+          <trigger-conversation idTarget="MadreFinalSiNo" />
+          <condition>
+            <inactive flag="RobarPuro" />
+          </condition>
+          <trigger-conversation idTarget="MadreFinalSiSi" />
+          <condition>
+            <active flag="RobarPuro" />
+          </condition>
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="MadreFinalBueno">
+  <graph-conversation id="MadreFinalNoNo">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <end-conversation />
+      <speak-char idTarget="Madre">Enhorabuena hijo, escuché lo del partido</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">Dicen que metiste el gol de la victoria</speak-char>
+      <condition />
+      <speak-player>Si, el entrenador me felicitó</speak-player>
+      <condition />
+      <speak-char idTarget="Madre">Eso es estupendo, me alegro por tí</speak-char>
+      <condition />
+      <speak-player>Gracias mamá</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Titulo" x="960" y="810" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MadreFinalNoSi">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Madre">Enhorabuena hijo, escuché lo del partido</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">Dicen que metiste el gol de la victoria</speak-char>
+      <condition />
+      <speak-player>Si, el entrenador me felicitó</speak-player>
+      <condition />
+      <speak-char idTarget="Madre">Eso es estupendo, me alegro por tí</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="505" editor-y="50">
+      <speak-char idTarget="Madre">Escucha Gabriel... tenemos que hablar</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">Ha llegado una carta de la Policía diciendo que te grabaron robando en el colegio</speak-char>
+      <condition />
+      <speak-player>¿Es eso cierto?</speak-player>
+      <condition />
+      <speak-player>#O Oh no, Francisco me dijo que no había cámaras</speak-player>
+      <condition />
+      <speak-player>Esto... bueno... los chicos insistieron que querían probar los puros del director...</speak-player>
+      <condition />
+      <speak-player>No tenía elección...</speak-player>
+      <condition />
+      <speak-char idTarget="Madre">Hijo, ¿Pero como se te ocurre?</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">Ahora tenemos que pagar una multa, y da gracias si no te expulsan nada más empezar en el nuevo colegio</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">Vete a tu cuarto, ya hablaremos más tarde</speak-char>
+      <condition />
+      <speak-player>Esta bien...</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Titulo" x="960" y="810" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MadreFinalSiNo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Madre">Has vuelto, ¿Como fue el partido?</speak-char>
+      <condition />
+      <speak-player>No muy bien...</speak-player>
+      <condition />
+      <speak-player>El entrenador no me dejó jugar todo el partido</speak-player>
+      <condition />
+      <speak-player>Dice que no estoy en forma</speak-player>
+      <condition />
+      <speak-char idTarget="Madre">Bueno, estoy segura de que solo es una mala racha</speak-char>
+      <condition />
+      <speak-char idTarget="Madre">El estrés de ir a un colegio nuevo y eso</speak-char>
+      <condition />
+      <speak-player>Si... supongo que es eso...</speak-player>
+      <condition />
+      <speak-player>#O Menos mal que no se ha enterado de lo del tabaco...</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Titulo" x="960" y="810" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MadreFinalSiSi">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Madre">Has vuelto, ¿Como fue el partido?</speak-char>
+      <condition />
+      <speak-player>No muy bien...</speak-player>
+      <condition />
+      <speak-player>El entrenador no me dejó jugar todo el partido</speak-player>
+      <condition />
+      <speak-player>Dice que no estoy en forma</speak-player>
+      <condition />
+      <speak-char idTarget="Madre">Ya... Quizá tenga algo que ver con esto...</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="533" editor-y="50">
+      <speak-player>Ha llegado una carta de la Policía diciendo que te grabaron robando en el colegio</speak-player>
+      <condition />
+      <speak-player>¿Es eso cierto?</speak-player>
+      <condition />
+      <speak-player>Oh no, Francisco me dijo que no había cámaras</speak-player>
+      <condition />
+      <speak-player>Esto... bueno... los chicos insistieron que querían probar los puros del director...</speak-player>
+      <condition />
+      <speak-player>No tenía elección...</speak-player>
+      <condition />
+      <speak-player>Hijo, ¿Pero como se te ocurre?</speak-player>
+      <condition />
+      <speak-player>Ahora tenemos que pagar una multa, y da gracias si no te expulsan nada más empezar en el nuevo colegio</speak-player>
+      <condition />
+      <speak-player>Vete a tu cuarto, ya hablaremos más tarde</speak-player>
+      <condition />
+      <speak-player>Esta bien...</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Titulo" x="960" y="810" transitionTime="0" transitionType="0" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <object id="MaquinaTabaco" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
