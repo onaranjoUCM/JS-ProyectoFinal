@@ -388,6 +388,7 @@
         <condition>
           <inactive flag="MadreConvD3" />
           <equals var="dia" value="3" />
+          <inactive flag="DecidesRobarPuro" />
         </condition>
         <effect>
           <trigger-conversation idTarget="MadreDia3Ini" />
@@ -397,7 +398,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
           <equals var="dia" value="3" />
-          <active flag="CampoFutbol1" />
+          <active flag="DecidesRobarPuro" />
         </condition>
         <effect>
           <trigger-conversation idTarget="MadreDia3" />
@@ -935,9 +936,6 @@ Parece que todos suben a clase.</speak-player>
       </exit>
       <exit rectangular="yes" x="752" y="48" width="312" height="247" hasInfluenceArea="no" idTarget="PasilloDia3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
-        <condition>
-          <active flag="RobarPuro" />
-        </condition>
       </exit>
     </exits>
   </scene>
@@ -953,6 +951,9 @@ Parece que todos suben a clase.</speak-player>
     <exits>
       <exit rectangular="yes" x="-5" y="1460" width="2002" height="130" hasInfluenceArea="no" idTarget="Escaleras2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="RobarPuro" />
+        </condition>
       </exit>
     </exits>
     <active-areas>
